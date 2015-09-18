@@ -1,31 +1,23 @@
-angular.module('myBlog', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalprecht.translate','ui.materialize',
-    //'ui.bootstrap', // for modal dialogs
-    'ngResource', 'ui.router', 'ngCookies', 'ngCacheBuster', 'ngFileUpload', 'infinite-scroll' ])
+angular.module('myBlog', ['ui.router'])
 
-.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $translateProvider, tmhDynamicLocaleProvider, httpRequestInterceptorCacheBusterProvider) {
+.config(function ($stateProvider, $urlRouterProvider) {
 
-    //Cache everything except rest api requests
-    httpRequestInterceptorCacheBusterProvider.setMatchlist([/.*api.*/, /.*protected.*/], true);
     $urlRouterProvider.otherwise('/');
     $stateProvider
         .state('site', {
             'abstract': true,
             views: {
                 'navbar@': {
-                    template: '<h1>this is navbar</h1>',
-                    controller: ''
+                    template: '<h1>this is navbar</h1>'
                 },
                 'sidebar@': {
-                    template: '<h1>this is sidebar</h1>',
-                    controller: ''
+                    template: '<h1>this is sidebar</h1>'
                 },
                 'content@': {
-                    template: '<h1>this is main content</h1>',
-                    controller: ''
+                    template: '<h1>this is main content</h1>'
                 },
                 'footer@': {
-                    template: '<h1>this is footer</h1>',
-                    controller: ''
+                    template: '<h1>this is footer</h1>'
                 }
             }
         });

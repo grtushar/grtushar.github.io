@@ -1,11 +1,11 @@
 <html ng-app = 'myBlog'>
     <head>
         <title>Abstruse</title>
-        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>a
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
     </head>
 
-    <body>
-        <div ui-view="navbar"></div>
+    <body ng-controller="mainController">
+        <div ui-view="navbar" ng-cloak=""></div>
         <div ui-view="sidebar"></div>
         <div ui-view="content"></div>
         <div ui-view="footer"></div>
@@ -13,6 +13,7 @@
 
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="config/config.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
-    <script src="scripts/angular-ui-router.js"></script>
+    <script type="text/javascript" src="app.controller.js"></script>
+    <!--<script src="scripts/angular-ui-router.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 </html>
