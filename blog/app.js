@@ -1,5 +1,4 @@
-angular.module('creditworldApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalprecht.translate','ui.materialize',
-               //'ui.bootstrap', // for modal dialogs
+angular.module('myBlog', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalprecht.translate','ui.materialize',
     'ngResource', 'ui.router', 'ngCookies', 'ngCacheBuster', 'ngFileUpload', 'infinite-scroll' ])
 
     .run(function ($rootScope, $location, $window, $http, $state, $translate, Language, Auth, Principal, ENV, VERSION) {
