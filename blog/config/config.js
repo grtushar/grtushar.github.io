@@ -19,12 +19,6 @@ angular.module('myBlog', ['ui.router'])
                 'footer@': {
                     templateUrl: 'views/footer.html'
                 }
-            },
-
-            resolve: {
-                translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
-                    $translatePartialLoader.addPart('global');
-                }]
             }
         })
         .state('sam', {
