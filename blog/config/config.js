@@ -6,18 +6,28 @@ angular.module('myBlog', ['ui.router'])
     $stateProvider
         .state('site', {
             'abstract': true,
+            url: '/',
             views: {
                 'navbar@': {
-                    template: '<h1>this is navbar</h1>'
+                    templateUrl: 'views/navbar.html'
                 },
                 'sidebar@': {
-                    template: '<h1>this is sidebar</h1>'
+                    templateUrl: 'views/sidebar.html'
                 },
                 'content@': {
-                    template: '<h1>this is main content</h1>'
+                    templateUrl: 'views/home.html'
                 },
                 'footer@': {
-                    template: '<h1>this is footer</h1>'
+                    templateUrl: 'views/footer.html'
+                }
+            }
+        })
+        .state('sam', {
+            parent: 'site',
+            url: '/sam',
+            views: {
+                'content@': {
+                    template: '<h1>hello fromm sam</h1>'
                 }
             }
         });
