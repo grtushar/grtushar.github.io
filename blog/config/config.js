@@ -2,7 +2,7 @@ angular.module('myBlog', ['ui.router'])
 
 .config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/');
+    //$urlRouterProvider.otherwise('/');
     $stateProvider
         .state('site', {
             'abstract': true,
