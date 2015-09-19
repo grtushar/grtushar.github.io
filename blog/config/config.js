@@ -6,7 +6,6 @@ angular.module('myBlog', ['ui.router'])
     $stateProvider
         .state('site', {
             'abstract': true,
-            url: '/home',
             views: {
                 'navbar@': {
                     templateUrl: 'views/navbar.html'
@@ -20,6 +19,12 @@ angular.module('myBlog', ['ui.router'])
                 'footer@': {
                     templateUrl: 'views/footer.html'
                 }
+            },
+
+            resolve: {
+                translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                    $translatePartialLoader.addPart('global');
+                }]
             }
         })
         .state('sam', {
