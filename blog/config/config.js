@@ -9,7 +9,7 @@ angular.module('myBlog', ['ui.router'])
             url: '/sam',
             views: {
                 'content@': {
-                    template: '<h1>hello fromm sam</h1>'
+                    template: '<h1>hello from sam</h1>'
                 }
             }
         });

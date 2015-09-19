@@ -11,7 +11,6 @@ angular.module('myBlog', ['ui.router'])
         $stateProvider
             .state('site', {
                 'abstract': true,
-                url: '/',
                 views: {
                     'navbar@': {
                         templateUrl: 'views/navbar.html'
