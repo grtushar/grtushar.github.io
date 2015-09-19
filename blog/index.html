@@ -6,8 +6,8 @@
     </head>
 
     <body ng-controller="mainController">
-        <button ng-click="go()">go</button>
-        <button ng-href="#/home">home</button>
+        <button ng-click="go('sam')">go</button>
+        <button ng-click="go('site')">home</button>
         <div ui-view="navbar"></div>
         <div ui-view="sidebar"></div>
         <div ui-view="content"></div>
