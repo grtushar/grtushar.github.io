@@ -4,24 +4,6 @@ angular.module('myBlog', ['ui.router'])
 
     $urlRouterProvider.otherwise('/');
     $stateProvider
-        .state('site', {
-            'abstract': true,
-            url: '/',
-            views: {
-                'navbar@': {
-                    templateUrl: 'views/navbar.html'
-                },
-                'sidebar@': {
-                    templateUrl: 'views/sidebar.html'
-                },
-                'content@': {
-                    templateUrl: 'views/home.html'
-                },
-                'footer@': {
-                    templateUrl: 'views/footer.html'
-                }
-            }
-        })
         .state('sam', {
             parent: 'site',
             url: '/sam',
