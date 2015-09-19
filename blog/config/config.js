@@ -1,8 +1,6 @@
 angular.module('myBlog', ['ui.router'])
 
 .config(function ($stateProvider, $urlRouterProvider) {
-
-    $urlRouterProvider.otherwise('/');
     $stateProvider
         .state('sam', {
             parent: 'site',
