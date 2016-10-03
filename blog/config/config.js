@@ -5,7 +5,6 @@ angular.module('myBlog')
     $urlRouterProvider.otherwise('/home');
     $stateProvider
         .state('site', {
-            'abstract': true,
             views: {
                 'navbar@': {
                     templateUrl: 'views/navbar.html'
