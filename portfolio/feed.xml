@@ -4,10 +4,10 @@
     <title>Golam Rahman Tushar</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 26 Jul 2017 01:28:11 +0600</pubDate>
-    <lastBuildDate>Wed, 26 Jul 2017 01:28:11 +0600</lastBuildDate>
+    <link>https://shadhin.github.io/portfolio//</link>
+    <atom:link href="https://shadhin.github.io/portfolio//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 26 Jul 2017 02:10:08 +0600</pubDate>
+    <lastBuildDate>Wed, 26 Jul 2017 02:10:08 +0600</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Thu, 09 Apr 2015 17:23:32 +0600</pubDate>
-        <link>http://localhost:4000/jekyll/update/2015/04/09/welcome-to-jekyll-copy.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2015/04/09/welcome-to-jekyll-copy.html</guid>
+        <link>https://shadhin.github.io/portfolio//jekyll/update/2015/04/09/welcome-to-jekyll-copy.html</link>
+        <guid isPermaLink="true">https://shadhin.github.io/portfolio//jekyll/update/2015/04/09/welcome-to-jekyll-copy.html</guid>
         
         
         <category>jekyll</category>
