@@ -1,0 +1,41 @@
+[{
+  "id": "2374f9ca-2969-48e7-b43e-4d94e530e564",
+  "name": "Engineering",
+  "companyId": "56d8eec7-17ee-4fac-910d-d97e62d4deb0"
+}, {
+  "id": "0454ce13-0451-4446-a137-01e5280991b4",
+  "name": "Human Resources",
+  "companyId": "56d8eec7-17ee-4fac-910d-d97e62d4deb0"
+}, {
+  "id": "5f944ba9-1fff-433a-bbd4-270a09ab996e",
+  "name": "Accounting",
+  "companyId": "ba56b599-a65e-4bff-8b3a-c57003aba94a"
+}, {
+  "id": "e265c15f-1d91-44f5-b657-1fadd12e7b71",
+  "name": "Sales",
+  "companyId": "3cfe602b-6c30-4ff1-b8d6-211bde86c250"
+}, {
+  "id": "24149ca4-37b7-49a3-92e2-6bd8e5a2f2a9",
+  "name": "Business Development",
+  "companyId": "36f4c81b-3b1f-4113-8b8d-26707c9758ce"
+}, {
+  "id": "e2bc64e1-2523-435f-89cb-bc02b53f02f7",
+  "name": "Business Development",
+  "companyId": "5281190a-84ed-43ee-b45c-58450a72921a"
+}, {
+  "id": "2167ab9a-8fef-4e7a-a715-5f7837c76861",
+  "name": "Product Management",
+  "companyId": "b4cc52f0-b234-49cb-b62a-c713e9603856"
+}, {
+  "id": "ae47d962-6744-4be9-bfcc-8b89838f247f",
+  "name": "Services",
+  "companyId": "a802fe37-692a-42be-b02f-ac2665c67571"
+}, {
+  "id": "ef26ee0b-45e1-46fd-9e93-852e669f3c83",
+  "name": "Support",
+  "companyId": "e3352aae-dd1e-4c28-a19f-485799b09f9f"
+}, {
+  "id": "17dcb515-3ff1-4de7-9b06-9253d7ba01a9",
+  "name": "Training",
+  "companyId": "d80660b5-5ac3-4580-b018-8e34758d9189"
+}]
