@@ -11,7 +11,7 @@ title                    : "Academic Homepage"
 title_separator          : "-"
 name                     : &name "Md Golam Rahman Tushar"
 description              : &description "personal description"
-url                      : https://grtushar.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : http://localhost:4000 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "grtushar/grtushar.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -81,8 +81,8 @@ analytics:
 # Site Author
 author:
   name             : "Md Golam Rahman Tushar"
-  avatar           : "DP.png"
-  bio              : "Assistant Lead Software Engineer"
+  avatar           : "DP.jpg"
+  bio              : "Software Engineer"
   location         : "Dhaka, Bangladesh"
   employer         : "bKash Limited"
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/grtushar/"
+  linkedin         : "grtushar"
   orcid            : # "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
