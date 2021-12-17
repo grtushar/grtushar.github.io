@@ -34,12 +34,8 @@ redirect_from:
         ✓ Developed news feed features such as post, comment, like/unlike, etc. for an online social media platform for musicians.<br/>
         ✓ Worked with advanced Javascript & AngularJS features<br/>
         ✓ Worked in a web platform developed using AngularJS, .NET, MongoDB<br/>
-    <ul style="color:black; font-size:12px; list-style: none;">>
-      <li>✓ this is my text</li>
-      <li>✓ this is my text</li>
-      <li>✓ this is my text</li>
-      <li>✓ this is my text</li>
-      <li>✓ this is my text</li>
-    </ul>
+    * abc
+        * edf
+    * cde
 <br/>
     
