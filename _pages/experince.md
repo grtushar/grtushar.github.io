@@ -10,10 +10,12 @@ redirect_from:
     <span style="color:black; font-size:17px"><b><a href="https://www.bkash.com/" target="_blank"><font color="brown" size="5">bKash Limited</font></a></b></span><br/>
     Dhaka, Bangladesh<br/>
     Assistant Lead Software Engineer [April, 2020 - Present]<br/>
-    ✓ Generating new ideas and communicating with other teams to check the feasibility of these ideas
-    ✓ Developing various features of an mobile financial service application used by millions of users daily using Flutter
-    ✓ Actively participating in recruitment process
-    ✓ Started the Test Driven Development
+    <span style="color:black; font-size:12px">
+        ✓ Generating new ideas and communicating with other teams to check the feasibility of these ideas<br/>
+        ✓ Developing various features of an mobile financial service application used by millions of users daily using Flutter<br/>
+        ✓ Actively participating in recruitment process<br/>
+        ✓ Started the Test Driven Development<br/>
+    </span>
 <br/>
     <span style="color:black; font-size:17px"><b><a href="https://ridmik.com" target="_blank"><font color="brown" size="5">Ridmik Labs</font></a></b></span><br/>
     Dhaka, Bangladesh<br/>
