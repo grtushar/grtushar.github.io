@@ -38,20 +38,20 @@ redirect_from:
   <span style="color:black; font-size:17px"><b><a href="http://aust.edu/" target="_blank"><font color="brown" size="5">Ahsanullah University of Science and Technology</font></a></b></span><br/>
     Adjunct Lecturer [February, 2017 - July, 2018]<br/>
     Department: <a href="http://aust.edu/cse/index.htm" target="_blank">Computer Science and Engineering</a> <br/>
-    Taken Courses:
+    Taken Courses:<br/>
     <span style="color:black; font-size:14px">
-        - Software Development using Java
-        - Software Development using C#
+        - Software Development using Java<br/>
+        - Software Development using C#<br/>
     </span>
 <br/>
   <span style="color:black; font-size:17px"><b><a href="https://seu.edu.bd/" target="_blank"><font color="brown" size="5">South East University</font></a></b></span><br/>
     Adjunct Lecturer [January, 2017 - December, 2017]<br/>
     Department: <a href="https://seu.edu.bd/dept/cse.php?id=overview" target="_blank">Computer Science and Engineering</a> <br/>
-    Taken Courses:
+    Taken Courses:<br/>
     <span style="color:black; font-size:14px">
-        - Programming Language (C)
-        - Programming Language (C) Lab
-        - Operating System
+        - Programming Language (C)<br/>
+        - Programming Language (C) Lab<br/>
+        - Operating System<br/>
     </span>
 <br/>
   <span style="color:black; font-size:17px"><b><a href="https://selise.ch/" target="_blank"><font color="brown" size="5">SELISE Digital Platform</font></a></b></span><br/>
