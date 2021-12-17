@@ -8,10 +8,10 @@ redirect_from:
 ---
 
 <br/>
-    <span style="color:black; font-weight:bold; font-size:18px">bKash Customer App (Android & iOS)</span>[[Link]](https://play.google.com/store/apps/details?id=com.bKash.customerapp&hl=en&gl=US)<br/>
+    <span style="color:black; font-weight:bold; font-size:18px">bKash Customer App (Android & iOS)</span> [[Link]](https://play.google.com/store/apps/details?id=com.bKash.customerapp&hl=en&gl=US)<br/>
     Currently responsible for developing various features of bKash mobile banking application used by millions of users daily using Flutter.<br/>
 <br/>
-    <span style="color:black; font-weight:bold; font-size:18px">Ridmik Chats (Android Application)</span>[[Link]](https://play.google.com/store/apps/details?id=ridmik.one&hl=en&gl=US)<br/>
+    <span style="color:black; font-weight:bold; font-size:18px">Ridmik Chats (Android Application)</span> [[Link]](https://play.google.com/store/apps/details?id=ridmik.one&hl=en&gl=US)<br/>
     An end to end encrypted android messaging application using signal protocol. Reduced some CPU intensive image processing task completion time by a great margin using Render Script Framework. Also designed and developed image and video editing tools for this app having filter, crop, zoom, rotate, auto resize, auto re-positioning etc. features.<br/>
 <br/>
     <span style="color:black; font-weight:bold; font-size:18px">Ridmik News (Android Application)</span> [[Link]](https://play.google.com/store/apps/details?id=ridmik.news)<br/>
