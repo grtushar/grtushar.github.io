@@ -12,11 +12,11 @@ main:
   - title: "Education"
     url: /education/
 
-  - title: "Projects"
-    url: /projects/
-
   - title: "Skills & Achievements"
     url: /achievements/
+
+  - title: "Projects"
+    url: /projects/
 
   - title: "Blog Posts"
     url: /year-archive/
