@@ -29,11 +29,17 @@ redirect_from:
 <br/>
   <span style="color:black; font-size:17px"><b><a href="https://selise.ch/" target="_blank"><font color="brown" size="5">SELISE Digital Platform</font></a></b></span><br/>
     Software Engineer [June, 2015 - Oct, 2016]<br/>
-    Contributions:
+    Contributions:<br/>
         ✓ Designed and Developed the FIRST multi-track audio player for web-browsers from scratch using HTML5 web audio API and JavaScript having features like trimming, seeking, snap to grid, collaboration in real-time, etc.<br/>
         ✓ Developed news feed features such as post, comment, like/unlike, etc. for an online social media platform for musicians.<br/>
         ✓ Worked with advanced Javascript & AngularJS features<br/>
         ✓ Worked in a web platform developed using AngularJS, .NET, MongoDB<br/>
+    <ul style="color:black; font-size:12px; list-style: none;">>
+      <li>✓ this is my text</li>
+      <li>✓ this is my text</li>
+      <li>✓ this is my text</li>
+      <li>✓ this is my text</li>
+      <li>✓ this is my text</li>
+    </ul>
 <br/>
-    
     
