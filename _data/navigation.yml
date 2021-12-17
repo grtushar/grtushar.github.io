@@ -11,12 +11,24 @@ main:
 
   - title: "Education"
     url: /education/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
+
+  - title: "Completed Online Courses"
+    url: /courses/
+
+  - title: "Projects"
+    url: /projects/
+
+  - title: "Achievements"
+    url: /achievements/
+
+  - title: "Technical Skills"
+    url: /skills/
     
   - title: "CV"
     url: /cv/
+
+  - title: "Blog Posts"
+    url: /year-archive/
     
   - title: "Guide"
     url: /markdown/
