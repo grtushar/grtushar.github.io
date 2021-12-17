@@ -6,7 +6,13 @@ author_profile: true
 redirect_from:
 - /resume
 ---
-
+<br/>
+    <span style="color:black; font-weight:bold; font-size:18px">Technical Skills</span><br/>
+    <span style="text-decoration:underline;">Languages</span>: C/C++ (proficient), Java (professional exp), Python (proficient), Dart (professional exp), JavaScript (professional exp)<br/>
+    <span style="text-decoration:underline;">Mobile Application Development</span>: Android (professional exp), Flutter (professional exp)<br/>
+    <span style="text-decoration:underline;">Frameworks</span>: AngularJs (professional exp), Spring (prior experience), Vaadin 8 (professional exp)<br/>
+    <span style="text-decoration:underline;">Database Tools</span>:  Oracle, PLSQL, MySql, Mongo Db (professional exp)<br/>
+    <span style="text-decoration:underline;">Others</span>: Sql, Git, Latex, OOP, Vim, JSON<br/>
 <br/>
     <span style="color:black; font-weight:bold; font-size:18px">Online Course Certificates</span><br/>
     • [[Certificate]](https://www.coursera.org/account/accomplishments/certificate/2MSXFLMCVDUH?utm_medium=certificate&utm_source=link&utm_campaign=copybutton_certificate) Machine Learning by Stanford University on Coursera. Certificate earned on February 20, 2017<br/>
