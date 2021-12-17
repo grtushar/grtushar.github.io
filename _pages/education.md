@@ -14,9 +14,9 @@ redirect_from:
 <br/>
     <span style="color:black; font-weight:bold; font-size:18px">Ramgonj Government College</span><br/>
     Higher Secondary Certificate (HSC) [[Certificate]](https://grtushar.github.io/files/hsc-certificate.pdf)<br/>
-    <span style="text-decoration:underline;">GPA</span>: <span style="font-weight:bold;">5.00</span> out 5.00 [[Transcript]](https://grtushar.github.io/files/hsc-transcript.pdf)<br/><br/>
+    <span style="text-decoration:underline;">GPA</span>: <span style="font-weight:bold;">5.00</span> out 5.00 [[Transcript]](https://grtushar.github.io/files/hsc-transcript.pdf)<br/>
 <br/>
     <span style="color:black; font-weight:bold; font-size:18px">Ramgonj M U Government High School</span><br/>
     Secondary School Certificate (SSC) [[Certificate]](https://grtushar.github.io/files/ssc-certificate.pdf)<br/>
-    <span style="text-decoration:underline;">GPA</span>: <span style="font-weight:bold;">5.00</span> out 5.00 [[Transcript]](https://grtushar.github.io/files/ssc-transcript.pdf)<br/><br/>
+    <span style="text-decoration:underline;">GPA</span>: <span style="font-weight:bold;">5.00</span> out 5.00 [[Transcript]](https://grtushar.github.io/files/ssc-transcript.pdf)<br/>
 <br/>
