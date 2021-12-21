@@ -1,11 +1,11 @@
 ---
-title: 'Future Blog Post'
-date: 2199-01-01
-permalink: /posts/2012/08/blog-post-4/
+title: 'Git Handbook'
+date: 2021-06-06
+permalink: https://medium.com/@grtushar11/git-handbook-636de0143829
 tags:
-  - cool posts
-  - category1
-  - category2
+  - git
+  - vcs
+  - version control system
 ---
 
-This post will show up by default. To disable scheduling of future posts, edit `config.yml` and set `future: false`. 
+I used to think I know all the necessary things about git. But, a few days back I met a git guru who deleted a commit from the commit history within a few seconds in front of me while I didn’t know about deleting a commit. This incident intrigued me to solidify my knowledge about git which I use almost every day. 
