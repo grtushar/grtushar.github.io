@@ -1,4 +1,4 @@
-// Snake Game — self-contained IIFE, no dependencies
+// Snake Game — with Firebase leaderboard & username support
 (function () {
   'use strict';
 
@@ -22,9 +22,102 @@
   var overlayTitle = document.getElementById('snake-overlay-title');
   var overlayBtn = document.getElementById('snake-overlay-btn');
   var overlayScore = document.getElementById('snake-overlay-score');
+  var nameGroup = document.getElementById('snake-name-group');
+  var nameInput = document.getElementById('snake-name-input');
+  var leaderboardList = document.getElementById('snake-leaderboard-list');
 
   // --- State ---
   var snake, direction, nextDirection, food, score, highScore, speed, loop, running;
+  var playerName = '';
+
+  // --- Username persistence ---
+  function loadUsername() {
+    try { return localStorage.getItem('snake-username') || ''; } catch (e) { return ''; }
+  }
+  function saveUsername(name) {
+    try { localStorage.setItem('snake-username', name); } catch (e) { /* noop */ }
+  }
+
+  // Pre-fill name input
+  playerName = loadUsername();
+  if (nameInput) nameInput.value = playerName;
+
+  // --- Firebase helpers ---
+  function getFirestore() {
+    return (typeof db !== 'undefined' && db) ? db : null;
+  }
+
+  function submitScore(name, pts) {
+    var firestore = getFirestore();
+    if (!firestore || pts <= 0) return;
+    firestore.collection('snake-scores').add({
+      name: name,
+      score: pts,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    }).then(function () {
+      fetchLeaderboard();
+    }).catch(function (err) {
+      console.warn('Score submit failed:', err);
+    });
+  }
+
+  function fetchLeaderboard() {
+    var firestore = getFirestore();
+    if (!firestore) {
+      renderLeaderboard(null);
+      return;
+    }
+    firestore.collection('snake-scores')
+      .orderBy('score', 'desc')
+      .limit(10)
+      .get()
+      .then(function (snapshot) {
+        var entries = [];
+        snapshot.forEach(function (doc) {
+          var d = doc.data();
+          entries.push({ name: d.name, score: d.score });
+        });
+        renderLeaderboard(entries);
+      })
+      .catch(function (err) {
+        console.warn('Leaderboard fetch failed:', err);
+        renderLeaderboard(null);
+      });
+  }
+
+  function renderLeaderboard(entries) {
+    if (!leaderboardList) return;
+    leaderboardList.innerHTML = '';
+
+    if (!entries) {
+      leaderboardList.innerHTML = '<li class="snake-leaderboard-empty">No scores yet — be the first!</li>';
+      return;
+    }
+    if (entries.length === 0) {
+      leaderboardList.innerHTML = '<li class="snake-leaderboard-empty">No scores yet — be the first!</li>';
+      return;
+    }
+
+    for (var i = 0; i < entries.length; i++) {
+      var e = entries[i];
+      var li = document.createElement('li');
+      li.className = 'snake-leaderboard-entry';
+      if (e.name === playerName) {
+        li.className += ' snake-leaderboard-mine';
+      }
+      li.innerHTML =
+        '<span class="snake-leaderboard-rank">' + (i + 1) + '</span>' +
+        '<span class="snake-leaderboard-name">' + escapeHtml(e.name) + '</span>' +
+        '<span class="snake-leaderboard-pts">' + e.score + '</span>';
+      leaderboardList.appendChild(li);
+    }
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
 
   // --- Helpers ---
   function rand(max) { return Math.floor(Math.random() * max); }
@@ -59,7 +152,7 @@
     updateScore();
     placeFood();
     draw();
-    showOverlay('Snake', 'Play');
+    showOverlay('Snake', 'Play', undefined, true);
   }
 
   // --- Food placement ---
@@ -82,10 +175,15 @@
   }
 
   // --- Overlay ---
-  function showOverlay(title, btnText, finalScore) {
+  function showOverlay(title, btnText, finalScore, showName) {
     if (overlayTitle) overlayTitle.textContent = title;
     if (overlayBtn) overlayBtn.textContent = btnText;
     if (overlayScore) overlayScore.textContent = finalScore !== undefined ? 'Score: ' + finalScore : '';
+    if (nameGroup) nameGroup.style.display = showName ? '' : 'none';
+    if (showName && nameInput) {
+      nameInput.value = playerName;
+      setTimeout(function () { nameInput.focus(); }, 100);
+    }
     if (overlay) overlay.classList.add('visible');
   }
   function hideOverlay() {
@@ -230,7 +328,20 @@
     loop = setInterval(tick, speed);
   }
 
-  function start() {
+  function startGame() {
+    // Read and validate username
+    if (nameInput) {
+      var name = nameInput.value.trim();
+      if (!name) {
+        nameInput.focus();
+        nameInput.style.borderColor = '#f87171';
+        setTimeout(function () { nameInput.style.borderColor = ''; }, 1500);
+        return;
+      }
+      playerName = name;
+      saveUsername(playerName);
+    }
+
     if (running) return;
     running = true;
     hideOverlay();
@@ -241,14 +352,16 @@
     running = false;
     clearInterval(loop);
     draw();
-    showOverlay('Game Over', 'Retry', score);
+    // Submit score to Firebase
+    submitScore(playerName, score);
+    showOverlay('Game Over', 'Retry', score, true);
   }
 
   // --- Direction helpers ---
   var OPPOSITES = { up: 'down', down: 'up', left: 'right', right: 'left' };
 
   function setDir(dir) {
-    if (!running) { init(); start(); return; }
+    if (!running) { init(); startGame(); return; }
     if (OPPOSITES[dir] !== direction) {
       nextDirection = dir;
     }
@@ -262,8 +375,18 @@
   };
 
   document.addEventListener('keydown', function (e) {
+    // Don't hijack typing in the name input
+    if (e.target === nameInput) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        init();
+        startGame();
+      }
+      return;
+    }
+
     if (e.key === ' ' || e.key === 'Enter') {
-      if (!running) { e.preventDefault(); init(); start(); }
+      if (!running) { e.preventDefault(); init(); startGame(); }
       return;
     }
     var dir = KEY_MAP[e.key];
@@ -289,7 +412,7 @@
     var absDx = Math.abs(dx), absDy = Math.abs(dy);
     if (Math.max(absDx, absDy) < 20) {
       // Tap — start game
-      if (!running) { init(); start(); }
+      if (!running) { init(); startGame(); }
       return;
     }
     if (absDx > absDy) {
@@ -313,9 +436,10 @@
 
   // --- Overlay play button ---
   if (overlayBtn) {
-    overlayBtn.addEventListener('click', function () { init(); start(); });
+    overlayBtn.addEventListener('click', function () { init(); startGame(); });
   }
 
   // --- Boot ---
   init();
+  fetchLeaderboard();
 })();
