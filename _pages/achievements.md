@@ -1,45 +1,50 @@
 ---
 layout: archive
-title: "Skills and Achievements"
+title: "Skills & Achievements"
 permalink: /achievements/
 author_profile: true
-redirect_from:
-- /resume
 ---
-<br/>
-    <span style="color:black; font-weight:bold; font-size:18px">Technical Skills</span><br/>
-    <span style="text-decoration:underline;">Languages</span>: C/C++ (proficient), Java (professional exp), Python (proficient), Dart (professional exp), JavaScript (professional exp)<br/>
-    <span style="text-decoration:underline;">Mobile Application Development</span>: Android (professional exp), Flutter (professional exp)<br/>
-    <span style="text-decoration:underline;">Frameworks</span>: AngularJs (professional exp), Spring (prior experience), Vaadin 8 (professional exp)<br/>
-    <span style="text-decoration:underline;">Database Tools</span>:  Oracle, PLSQL, MySql, Mongo Db (professional exp)<br/>
-    <span style="text-decoration:underline;">Others</span>: Sql, Git, Latex, OOP, Vim, JSON<br/>
-<br/>
-    <span style="color:black; font-weight:bold; font-size:18px">Online Course Certificates</span><br/>
-    • [[Certificate]](https://www.coursera.org/account/accomplishments/certificate/2MSXFLMCVDUH?utm_medium=certificate&utm_source=link&utm_campaign=copybutton_certificate) Machine Learning by Stanford University on Coursera. Certificate earned on February 20, 2017<br/>
-    • [[Certificate]](https://www.coursera.org/account/accomplishments/certificate/72DLKJF9EN7J?utm_medium=certificate&utm_source=link&utm_campaign=copybutton_certificate) Neural Networks and Deep Learning by deeplearning.ai on Coursera. Certificate earned on February 8, 2018<br/>
-    • [[Certificate]](https://www.coursera.org/account/accomplishments/certificate/MH3M2TN7CKX9) Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization by deeplearning.ai on Coursera. Certificate earned on Jan, 2021<br/>
-    • [[Certificate]](https://www.coursera.org/account/accomplishments/certificate/L32V7D8UEMFN?utm_medium=certificate&utm_source=link&utm_campaign=copybutton_certificate) Design Patterns by University of Alberta on Coursera. Certificate earned at Tuesday, October 15, 2019<br/>
-    • [[Certificate]](https://www.coursera.org/account/accomplishments/certificate/MAK5YQ5WDY3T) Sequence Models by deeplearning.ai on Coursera. Certificate earned on July, 2021<br/>
-    • [[Certificate]](https://www.coursera.org/account/accomplishments/certificate/QJKUPEMZ748W?utm_medium=certificate&utm_source=link&utm_campaign=copybutton_certificate) Text Retrieval and Search Engines by University of Illinois at Urbana-Champaign on Coursera. Certificate earned on September 9, 2017<br/>
-    • [[Certificate]](https://www.coursera.org/account/accomplishments/certificate/PJJCQLZJ78T4) Version Control with Git by Atlassian on Coursera. Certificate earned at June 6, 2020<br/>
-    • [[Certificate]](https://www.coursera.org/account/accomplishments/verify/SZ82FU25ZYKL) Kotlin for Java Developers on Coursera. Certificate earned at January, 2020<br/>
-<br/>
-    <span style="color:black; font-weight:bold; font-size:18px">Selected Programming Contests (2012-2015)</span><br/>
-    • Aust Intra Programming Contest, 2013 (<span style="font-weight:bold;">3<sup>rd</sup></span>)<br/>
-    • NCPC RUET, 2015 (<span style="font-weight:bold;">11<sup>th</sup></span>)<br/>
-    • IUT ICT Fest, 2015 (<span style="font-weight:bold;">20<sup>th</sup></span>)<br/>
-    • IUT ICT Fest, 2014 (<span style="font-weight:bold;">22<sup>nd</sup></span>)<br/>
-    • ACM ICPC Dhaka Regional, 2014 (<span style="font-weight:bold;">29<sup>th</sup></span>)<br/>
-    • NSU IUPC, 2013 (<span style="font-weight:bold;">32<sup>nd</sup></span>)<br/>
-    • NCPC, 2014 (<span style="font-weight:bold;">33<sup>rd</sup></span>)<br/>
-    • ACM ICPC Dhaka Regional, 2013 (<span style="font-weight:bold;">52<sup>nd</sup></span>)<br/>
-<br/>
-    <span style="color:black; font-weight:bold; font-size:18px">Online Problem Solving</span><br/>
-    • Solved <span style="font-weight:bold;">1500+</span> ACM problems in different online judges (Codeforces, LightOJ, UVA etc)<br/>
-    • Codeforces highest rating 1688 (Blue) [[Profile]](https://codeforces.com/profile/grtushar)<br/>
-    • Topcode highest rating 1202 (Blue) [[Profile]](https://www.topcoder.com/members/shadhin119/details/?track=DATA_SCIENCE&subTrack=SRM)<br/>
-<br/>
-    <span style="color:black; font-weight:bold; font-size:18px">Voluntary Responsibilities</span><br/>
-    • Departmental programming contest trainer for new contestants<br/>
-    • Successfully organized two intra university programming contest that included responsibilities like problem setting, judging, arranging contest environment, troubleshooting etc.<br/>
-<br/>
+
+## Technical Skills
+{: .skill-group}
+
+- **Languages**: C/C++ (proficient), Java (professional), Python (proficient), Dart (professional), JavaScript (professional)
+- **Mobile Development**: Android (professional), Flutter (professional)
+- **Frameworks**: AngularJS (professional), Spring (prior experience), Vaadin 8 (professional)
+- **Database Tools**: Oracle, PL/SQL, MySQL, MongoDB (professional)
+- **Others**: SQL, Git, LaTeX, OOP, Vim, JSON
+
+## Online Course Certificates
+
+- [Certificate](https://www.coursera.org/account/accomplishments/certificate/2MSXFLMCVDUH) -- Machine Learning by Stanford University on Coursera (February 2017)
+- [Certificate](https://www.coursera.org/account/accomplishments/certificate/72DLKJF9EN7J) -- Neural Networks and Deep Learning by deeplearning.ai on Coursera (February 2018)
+- [Certificate](https://www.coursera.org/account/accomplishments/certificate/MH3M2TN7CKX9) -- Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization by deeplearning.ai on Coursera (January 2021)
+- [Certificate](https://www.coursera.org/account/accomplishments/certificate/L32V7D8UEMFN) -- Design Patterns by University of Alberta on Coursera (October 2019)
+- [Certificate](https://www.coursera.org/account/accomplishments/certificate/MAK5YQ5WDY3T) -- Sequence Models by deeplearning.ai on Coursera (July 2021)
+- [Certificate](https://www.coursera.org/account/accomplishments/certificate/QJKUPEMZ748W) -- Text Retrieval and Search Engines by University of Illinois at Urbana-Champaign on Coursera (September 2017)
+- [Certificate](https://www.coursera.org/account/accomplishments/certificate/PJJCQLZJ78T4) -- Version Control with Git by Atlassian on Coursera (June 2020)
+- [Certificate](https://www.coursera.org/account/accomplishments/verify/SZ82FU25ZYKL) -- Kotlin for Java Developers on Coursera (January 2020)
+
+## Selected Programming Contests (2012--2015)
+
+| Contest | Position |
+|---------|----------|
+| AUST Intra Programming Contest, 2013 | **3rd** |
+| NCPC RUET, 2015 | **11th** |
+| IUT ICT Fest, 2015 | **20th** |
+| IUT ICT Fest, 2014 | **22nd** |
+| ACM ICPC Dhaka Regional, 2014 | **29th** |
+| NSU IUPC, 2013 | **32nd** |
+| NCPC, 2014 | **33rd** |
+| ACM ICPC Dhaka Regional, 2013 | **52nd** |
+
+## Online Problem Solving
+
+- Solved **1500+** ACM problems in different online judges (Codeforces, LightOJ, UVA, etc.)
+- Codeforces highest rating 1688 (Blue) [[Profile]](https://codeforces.com/profile/grtushar)
+- Topcoder highest rating 1202 (Blue) [[Profile]](https://www.topcoder.com/members/shadhin119/details/?track=DATA_SCIENCE&subTrack=SRM)
+
+## Voluntary Responsibilities
+
+- Departmental programming contest trainer for new contestants
+- Successfully organized two intra-university programming contests including problem setting, judging, arranging contest environment, and troubleshooting

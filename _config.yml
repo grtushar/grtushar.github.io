@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Academic Homepage"
+title                    : "Md Golam Rahman Tushar"
 title_separator          : "-"
 name                     : &name "Md Golam Rahman Tushar"
-description              : &description "personal description"
+description              : &description "Lead Software Engineer at bKash Limited | Software Engineering, Deep Learning & NLP Research"
 url                      : https://grtushar.github.io # http://localhost:4000 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "grtushar/grtushar.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Md Golam Rahman Tushar"
   avatar           : "DP.jpg"
-  bio              : "Software Engineer"
+  bio              : "Lead Software Engineer at bKash Limited"
   location         : "Dhaka, Bangladesh"
   employer         : "bKash Limited"
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"

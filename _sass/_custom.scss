@@ -1,0 +1,107 @@
+// Entry card — bordered card with left accent for experience/project/education/research entries
+.entry-card {
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #494e52;
+  border-radius: 4px;
+  padding: 1.2em 1.4em;
+  margin-bottom: 1.2em;
+  background: #fff;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.3em;
+  }
+
+  ul, ol {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Typography classes for card content
+.entry-meta {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+
+.entry-title {
+  font-weight: 700;
+  font-size: 1.15em;
+}
+
+.entry-link {
+  font-size: 0.85em;
+
+  a {
+    text-decoration: none;
+    color: #494e52;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Skill group spacing for achievements page
+.skill-group {
+  margin-bottom: 1.5em;
+}
+
+// Active navigation link
+.greedy-nav .visible-links a.active {
+  color: #000;
+  border-bottom: 2px solid #494e52;
+}
+
+// Footer contrast fix (WCAG AA)
+.page__footer {
+  color: #ccc;
+
+  a {
+    color: #ddd;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.page__footer-copyright {
+  color: #ccc;
+  font-size: 0.85em;
+}
+
+// Table improvements for achievements page
+.page__content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+  font-size: 0.95em;
+
+  th {
+    background: #f5f5f5;
+    font-weight: 700;
+    text-align: left;
+    padding: 0.6em 0.8em;
+    border-bottom: 2px solid #ccc;
+  }
+
+  td {
+    padding: 0.5em 0.8em;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  tr:hover td {
+    background: #fafafa;
+  }
+}
