@@ -1,0 +1,175 @@
+// ==========================================================================
+// Snake Game Styles
+// ==========================================================================
+
+.snake-game {
+  max-width: 440px;
+  margin: 0 auto;
+
+  // Remove the teal bottom border from h2 inside the game container
+  h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+// --- Score Header ---
+.snake-score-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6em 1em;
+  background: var(--color-tint);
+  border: 1px solid var(--color-wash);
+  border-radius: var(--radius) var(--radius) 0 0;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.snake-score-label {
+  color: var(--color-dark);
+}
+
+.snake-high-label {
+  color: var(--color-secondary);
+}
+
+// --- Canvas Wrapper ---
+.snake-canvas-wrap {
+  position: relative;
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  line-height: 0; // eliminate gap below canvas
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+  }
+}
+
+// --- Overlay ---
+.snake-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 118, 110, 0.85);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.snake-overlay-title {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 800;
+  margin-bottom: 0.15em;
+}
+
+.snake-overlay-score {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05em;
+  margin-bottom: 0.6em;
+  min-height: 1.3em;
+}
+
+.snake-overlay-btn {
+  display: inline-block;
+  padding: 0.55em 1.8em;
+  background: #fff;
+  color: var(--color-dark);
+  font-weight: 700;
+  font-size: 1em;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+// --- D-Pad ---
+.snake-dpad {
+  display: none; // hidden on desktop
+  margin-top: 1em;
+}
+
+.snake-dpad-grid {
+  display: grid;
+  grid-template-areas:
+    ".  up  ."
+    "lt .  rt"
+    ".  dn  .";
+  grid-template-columns: repeat(3, 56px);
+  grid-template-rows: repeat(3, 56px);
+  gap: 6px;
+  justify-content: center;
+}
+
+.snake-dpad-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  background: var(--color-tint);
+  color: var(--color-dark);
+  font-size: 1.3em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s ease, transform 0.1s ease;
+
+  &:active {
+    background: var(--color-wash);
+    transform: scale(0.92);
+  }
+}
+
+#dpad-up    { grid-area: up; }
+#dpad-down  { grid-area: dn; }
+#dpad-left  { grid-area: lt; }
+#dpad-right { grid-area: rt; }
+
+// Show D-pad only on touch devices
+@media (pointer: coarse) {
+  .snake-dpad {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// --- Instructions ---
+.snake-instructions {
+  margin-top: 1.2em;
+  padding: 0.8em 1em;
+  background: var(--color-tint);
+  border: 1px solid var(--color-wash);
+  border-radius: var(--radius);
+  font-size: 0.88em;
+  color: #4b5563;
+
+  strong {
+    color: var(--color-dark);
+  }
+
+  p {
+    margin: 0.3em 0;
+  }
+}
