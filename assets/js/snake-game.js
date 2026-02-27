@@ -375,9 +375,10 @@
   };
 
   document.addEventListener('keydown', function (e) {
-    // Don't hijack typing in the name input
-    if (e.target === nameInput) {
-      if (e.key === 'Enter') {
+    // Don't hijack typing in any input field
+    var tag = e.target && e.target.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA') {
+      if (e.key === 'Enter' && e.target === nameInput) {
         e.preventDefault();
         init();
         startGame();
