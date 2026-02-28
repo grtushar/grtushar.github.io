@@ -2,18 +2,19 @@
 // Snake Game Styles
 // ==========================================================================
 
+.snake-heading {
+  max-width: 750px;
+  margin: 0 auto 0.3em;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
 .snake-game {
   display: flex;
   gap: 1.5em;
   align-items: flex-start;
   max-width: 750px;
   margin: 0 auto;
-
-  // Remove the teal bottom border from h2 inside the game container
-  h2 {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
 }
 
 .snake-game-area {
@@ -82,13 +83,13 @@
   color: #fff;
   font-size: 1.8em;
   font-weight: 800;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.4em;
 }
 
 .snake-overlay-score {
   color: rgba(255, 255, 255, 0.85);
   font-size: 1.05em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
   min-height: 1.3em;
 }
 

@@ -5,10 +5,9 @@ permalink: /games/
 author_profile: true
 ---
 
+<h2 class="snake-heading">Snake</h2>
 <div class="snake-game">
   <div class="snake-game-area">
-    <h2>Snake</h2>
-
     <div class="snake-score-header">
       <span class="snake-score-label">Score: <strong id="snake-score">0</strong></span>
       <span class="snake-high-label">Best: <strong id="snake-high">0</strong></span>
