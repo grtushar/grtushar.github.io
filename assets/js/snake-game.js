@@ -135,7 +135,8 @@
   }
 
   // --- Init / Reset ---
-  function init() {
+  function resetState() {
+    clearInterval(loop);
     var midX = Math.floor(COLS / 2);
     var midY = Math.floor(ROWS / 2);
     snake = [
@@ -152,6 +153,10 @@
     updateScore();
     placeFood();
     draw();
+  }
+
+  function init() {
+    resetState();
     showOverlay('Snake', 'Play', undefined, true);
   }
 
@@ -175,6 +180,7 @@
   }
 
   // --- Overlay ---
+  var focusTimer = null;
   function showOverlay(title, btnText, finalScore, showName) {
     if (overlayTitle) overlayTitle.textContent = title;
     if (overlayBtn) overlayBtn.textContent = btnText;
@@ -182,11 +188,13 @@
     if (nameGroup) nameGroup.style.display = showName ? '' : 'none';
     if (showName && nameInput) {
       nameInput.value = playerName;
-      setTimeout(function () { nameInput.focus(); }, 100);
+      clearTimeout(focusTimer);
+      focusTimer = setTimeout(function () { nameInput.focus(); }, 100);
     }
     if (overlay) overlay.classList.add('visible');
   }
   function hideOverlay() {
+    clearTimeout(focusTimer);
     if (nameInput) nameInput.blur();
     if (overlay) overlay.classList.remove('visible');
   }
@@ -330,7 +338,7 @@
   }
 
   function playGame() {
-    // Read and validate username BEFORE init() resets the input
+    // Read and validate username BEFORE reset clears state
     if (nameInput) {
       var name = nameInput.value.trim();
       if (!name) {
@@ -343,7 +351,7 @@
       saveUsername(playerName);
     }
 
-    init();
+    resetState();
     running = true;
     hideOverlay();
     restartLoop();
