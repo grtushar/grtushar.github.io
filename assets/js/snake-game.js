@@ -187,6 +187,7 @@
     if (overlay) overlay.classList.add('visible');
   }
   function hideOverlay() {
+    if (nameInput) nameInput.blur();
     if (overlay) overlay.classList.remove('visible');
   }
 
