@@ -328,8 +328,8 @@
     loop = setInterval(tick, speed);
   }
 
-  function startGame() {
-    // Read and validate username
+  function playGame() {
+    // Read and validate username BEFORE init() resets the input
     if (nameInput) {
       var name = nameInput.value.trim();
       if (!name) {
@@ -342,7 +342,7 @@
       saveUsername(playerName);
     }
 
-    if (running) return;
+    init();
     running = true;
     hideOverlay();
     restartLoop();
@@ -361,7 +361,7 @@
   var OPPOSITES = { up: 'down', down: 'up', left: 'right', right: 'left' };
 
   function setDir(dir) {
-    if (!running) { init(); startGame(); return; }
+    if (!running) { playGame(); return; }
     if (OPPOSITES[dir] !== direction) {
       nextDirection = dir;
     }
@@ -380,14 +380,13 @@
     if (tag === 'INPUT' || tag === 'TEXTAREA') {
       if (e.key === 'Enter' && e.target === nameInput) {
         e.preventDefault();
-        init();
-        startGame();
+        playGame();
       }
       return;
     }
 
     if (e.key === ' ' || e.key === 'Enter') {
-      if (!running) { e.preventDefault(); init(); startGame(); }
+      if (!running) { e.preventDefault(); playGame(); }
       return;
     }
     var dir = KEY_MAP[e.key];
@@ -413,7 +412,7 @@
     var absDx = Math.abs(dx), absDy = Math.abs(dy);
     if (Math.max(absDx, absDy) < 20) {
       // Tap — start game
-      if (!running) { init(); startGame(); }
+      if (!running) { playGame(); }
       return;
     }
     if (absDx > absDy) {
@@ -437,7 +436,7 @@
 
   // --- Overlay play button ---
   if (overlayBtn) {
-    overlayBtn.addEventListener('click', function () { init(); startGame(); });
+    overlayBtn.addEventListener('click', function () { playGame(); });
   }
 
   // --- Boot ---
