@@ -44,7 +44,7 @@
 
   // --- Firebase helpers ---
   function getFirestore() {
-    return (typeof db !== 'undefined' && db) ? db : null;
+    return window.snakeDb || null;
   }
 
   function submitScore(name, pts) {
@@ -53,7 +53,7 @@
     firestore.collection('snake-scores').add({
       name: name,
       score: pts,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      timestamp: window.firebase.firestore.FieldValue.serverTimestamp()
     }).then(function () {
       fetchLeaderboard();
     }).catch(function (err) {

@@ -19,7 +19,7 @@ var firebaseConfig = {
 // Initialize Firebase (only if config is filled in)
 if (firebaseConfig.apiKey && firebaseConfig.projectId) {
   firebase.initializeApp(firebaseConfig);
-  var db = firebase.firestore();
+  window.snakeDb = firebase.firestore();
 } else {
-  var db = null;
+  window.snakeDb = null;
 }

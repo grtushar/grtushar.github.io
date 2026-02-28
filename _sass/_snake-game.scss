@@ -303,7 +303,7 @@
 }
 
 // --- Mobile: stack game + leaderboard vertically ---
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .snake-game {
     flex-direction: column;
     align-items: center;
