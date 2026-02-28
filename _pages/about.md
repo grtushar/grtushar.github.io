@@ -8,8 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-Hello, I am Md Golam Rahman Tushar from a small country named Bangladesh located in South Asia. I completed my Bachelor of Science (B.Sc.) degree in August 2015 in Computer Science and Engineering from [Ahsanullah University of Science and Technology](https://aust.edu), one of the leading Engineering Universities in Bangladesh. At present, I am working as a Lead Software Engineer at the [bKash Limited](https://bkash.com), the leading mobile banking service in Bangladesh.
+Every day, millions of people across Bangladesh tap their phones to send money, pay bills, and run their businesses — and I help make that happen. I'm Tushar, a Lead Software Engineer at [bKash Limited](https://bkash.com), the country's largest mobile financial service. I build the systems that keep digital payments fast, reliable, and secure at massive scale.
 
-I am highly motivated to work in a competitive friendly environment where I can learn new things regularly and apply that knowledge to solve meaningful problems for the betterment of human lives.
+I grew up in Bangladesh, earned my B.Sc. in Computer Science and Engineering from [Ahsanullah University of Science and Technology](https://aust.edu) in 2015, and have been obsessed with building things that matter ever since. I care most about work that sits at the intersection of solid engineering and real-world impact — the kind where a well-placed optimization or a cleaner architecture quietly makes life easier for millions of people.
 
 [Download My Latest Resume](https://grtushar.github.io/files/Resume_Tushar.pdf){: .btn .btn--info}
