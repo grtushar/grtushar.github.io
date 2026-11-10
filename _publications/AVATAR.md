@@ -4,7 +4,13 @@ collection: publications
 permalink: /publication/avatar
 excerpt: ''
 date: 01-01-2021
+year: 2021
+authors: 'Wasi Ahmad, <b>Md Golam Rahman Tushar</b>, Saikat Chakraborty, Kai-Wei Chang'
 venue: 'arXiv'
+summary: >-
+  A corpus of 8,475 programming problems with solutions in both Java and Python,
+  collected from competitive programming sites, online platforms and open-source
+  repositories — with baselines for supervised program translation.
 paperurl: 'https://arxiv.org/abs/2108.11590'
 citation: 'Wasi Ahmad, <b>Md Golam Rahman Tushar</b>, Saikat Chakraborty, and Kai-Wei Chang.'
 ---

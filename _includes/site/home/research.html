@@ -1,0 +1,48 @@
+<section class="home-section" id="research" aria-labelledby="research-title">
+  <h2 class="section-label home-section__title" id="research-title">Research &amp; Publications</h2>
+
+  {%- assign publications = site.publications | sort: "year" | reverse %}
+  {%- for pub in publications %}
+  <article class="feature-card">
+    <div class="feature-card__meta eyebrow">
+      <span class="badge badge--solid">Paper</span>
+      <span>{{ pub.venue }} · {{ pub.year }}</span>
+    </div>
+    <h3 class="feature-card__title"><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></h3>
+    <p class="feature-card__authors">{{ pub.authors | default: pub.citation }}</p>
+    <p class="feature-card__text">{{ pub.summary }}</p>
+    <div class="feature-card__links">
+      {%- if pub.paperurl %}
+      <a href="{{ pub.paperurl }}">Read the paper {% include site/icon.html name="arrow-up-right" %}</a>
+      {%- endif %}
+      <a href="{{ pub.url | relative_url }}">Abstract {% include site/icon.html name="arrow-right" %}</a>
+      {%- if site.author.googlescholar %}
+      <a href="{{ site.author.googlescholar }}">Google Scholar {% include site/icon.html name="arrow-up-right" %}</a>
+      {%- endif %}
+    </div>
+  </article>
+  {%- endfor %}
+
+  <ul class="card-list">
+    {%- for item in site.data.research %}
+    <li class="card">
+      <div class="card__aside eyebrow">{{ item.area }}</div>
+      <div class="card__body">
+        <h3 class="card__title">
+          {%- if item.url -%}
+          <a class="card__link" href="{{ item.url }}">{{ item.title }}{% include site/icon.html name="arrow-up-right" %}</a>
+          {%- else -%}
+          {{ item.title }}
+          {%- endif -%}
+        </h3>
+        <p class="card__text">{{ item.summary }}</p>
+        <ul class="pill-list" aria-label="Tools">
+          {%- for tag in item.tags %}
+          <li class="pill">{{ tag }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>

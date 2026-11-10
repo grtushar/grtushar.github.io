@@ -1,0 +1,16 @@
+# Research projects shown under the featured publication(s) on the homepage.
+# Publications themselves live in the _publications collection.
+- area: NLP
+  title: Question answering for privacy policies
+  summary: >-
+    Summarizing and improving question answering over app privacy policies.
+    Crawled 10,000+ Google Play privacy policies and their metadata.
+  tags: [Python, Beautiful Soup, Machine Learning]
+
+- area: Info Retrieval
+  title: Multi-task learning for query intent classification & document ranking
+  url: https://github.com/grtushar/Web-Crawler
+  summary: >-
+    Classifying user queries into intents and mapping them onto the Open Directory
+    Project tree. Crawled 80,000+ web pages across 7,600 topics.
+  tags: [Python, NLTK, Anaconda]

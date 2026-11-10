@@ -1,0 +1,58 @@
+{%- assign skills = site.data.skills -%}
+<section class="home-section" id="skills" aria-labelledby="skills-title">
+  <h2 class="section-label home-section__title" id="skills-title">Skills &amp; Achievements</h2>
+
+  <div class="stats">
+    {%- for stat in skills.stats %}
+    <div class="stat">
+      <div class="stat__value">{{ stat.value }}</div>
+      <div class="stat__label">{% if stat.url %}<a href="{{ stat.url }}">{{ stat.label }}</a>{% else %}{{ stat.label }}{% endif %}</div>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <dl class="def-list">
+    {%- for group in skills.groups %}
+    <div class="def-row">
+      <dt class="eyebrow">{{ group.name }}</dt>
+      <dd>
+        <ul class="pill-list">
+          {%- for item in group.items %}
+          <li class="pill">{{ item }}</li>
+          {%- endfor %}
+        </ul>
+      </dd>
+    </div>
+    {%- endfor %}
+
+    <div class="def-row">
+      <dt class="eyebrow">Contests</dt>
+      <dd>
+        {%- for contest in skills.contests -%}
+        {{ contest.name }} — <strong>{{ contest.position }}</strong>{% unless forloop.last %} · {% endunless %}
+        {%- endfor -%}
+      </dd>
+    </div>
+
+    <div class="def-row">
+      <dt class="eyebrow">Online judges</dt>
+      <dd>{{ skills.ratings_html }}</dd>
+    </div>
+
+    <div class="def-row">
+      <dt class="eyebrow">Community</dt>
+      <dd>{{ skills.community }}</dd>
+    </div>
+
+    <div class="def-row">
+      <dt class="eyebrow">Certificates</dt>
+      <dd>
+        <ul class="plain-list">
+          {%- for cert in skills.certificates %}
+          <li><a href="{{ cert.url }}">{{ cert.title }}</a> — {{ cert.issuer }}, {{ cert.date }}</li>
+          {%- endfor %}
+        </ul>
+      </dd>
+    </div>
+  </dl>
+</section>

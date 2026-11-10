@@ -1,0 +1,51 @@
+# Work history shown in the homepage "Experience" section, newest first.
+- dates: Apr 2020 — Present
+  title: Lead Software Engineer
+  company: bKash Limited
+  url: https://www.bkash.com/
+  summary: >-
+    Build features for the bKash customer app — a mobile financial service used by
+    millions of people every day — in Flutter. Initiated the team's Test Driven
+    Development practice, take part in hiring, and work with other teams to check
+    the feasibility of new ideas.
+  tags: [Flutter, Dart, TDD, Fintech]
+
+- dates: Mar 2019 — Mar 2020
+  title: Software Engineer
+  company: Ridmik Labs
+  url: https://ridmik.com
+  summary: >-
+    Cut the completion time of CPU-intensive image processing in an Android app by a
+    wide margin using RenderScript. Built image and video editing tools — filters,
+    crop, zoom, rotate, auto-resize, auto-repositioning — plus core features of an
+    end-to-end encrypted messenger, working closely with the UI/UX team.
+  tags: [Android, RenderScript, Signal Protocol]
+
+- dates: Aug 2018 — Feb 2019
+  title: Software Engineer
+  company: itSoul Ltd
+  summary: >-
+    Designed and built a multi-tenant management website with Java Vaadin, plus
+    Android apps for real-time location sharing and for tracking product sales.
+  tags: [Java, Vaadin, Android]
+
+- dates: Jan 2017 — Jul 2018
+  title: Adjunct Lecturer
+  company: AUST & South East University
+  summary_html: >-
+    Taught in the Departments of Computer Science and Engineering: Software
+    Development using Java and C# at <a href="http://aust.edu/">AUST</a>
+    (Feb 2017 — Jul 2018), and Programming Language (C), its lab, and Operating
+    Systems at <a href="https://seu.edu.bd/">South East University</a>
+    (Jan — Dec 2017).
+  tags: [Teaching, Java, "C#", C]
+
+- dates: Jun 2015 — Oct 2016
+  title: Software Engineer
+  company: SELISE Digital Platform
+  url: https://selise.ch/
+  summary: >-
+    Built the first multi-track audio player for web browsers from scratch with the
+    HTML5 Web Audio API — trimming, seeking, snap-to-grid and real-time
+    collaboration — plus news-feed features for a social platform for musicians.
+  tags: [JavaScript, Web Audio API, AngularJS, .NET, MongoDB]

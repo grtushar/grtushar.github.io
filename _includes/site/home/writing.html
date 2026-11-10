@@ -1,0 +1,9 @@
+<section class="home-section" id="writing" aria-labelledby="writing-title">
+  <h2 class="section-label home-section__title" id="writing-title">Writing</h2>
+  <ol class="card-list">
+    {%- for post in site.posts limit: 4 %}
+    {% include site/post-card.html post=post %}
+    {%- endfor %}
+  </ol>
+  <p class="section-more"><a class="arrow-link" href="{{ '/blog/' | relative_url }}">All posts on the blog {% include site/icon.html name="arrow-right" %}</a></p>
+</section>
