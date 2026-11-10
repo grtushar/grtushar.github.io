@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% include site/head.html %}
+</head>
+<body class="{{ page.body_class | default: 'page' }}">
+<a class="skip-link" href="#content">Skip to content</a>
+{{ content }}
+</body>
+</html>

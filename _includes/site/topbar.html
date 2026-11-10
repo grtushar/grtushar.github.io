@@ -1,0 +1,21 @@
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="topbar__home" href="{{ '/' | relative_url }}">{% include site/icon.html name="arrow-left" %}{{ site.author.name }}</a>
+    <nav class="topbar__nav" aria-label="Site">
+      <ul>
+        {%- for item in site.data.navigation.pages %}
+        {%- assign item_url = item.url | relative_url %}
+        {%- if item.url == "/" %}
+          {%- assign is_current = false %}
+          {%- if page.url == "/" %}{% assign is_current = true %}{% endif %}
+        {%- else %}
+          {%- assign url_prefix = page.url | slice: 0, item.url.size %}
+          {%- assign is_current = false %}
+          {%- if url_prefix == item.url %}{% assign is_current = true %}{% endif %}
+        {%- endif %}
+        <li><a href="{{ item_url }}"{% if is_current %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

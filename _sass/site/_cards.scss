@@ -1,0 +1,235 @@
+// ==========================================================================
+// Cards: experience, projects, research, writing rows
+// On large screens a hovered card lifts and its siblings dim.
+// ==========================================================================
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 16px 0;
+  border-radius: var(--radius);
+  transition: background 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+
+  @media (min-width: $bp-lg) {
+    margin: 0 -24px;
+    padding: 20px 24px;
+
+    &:hover {
+      background: var(--surface);
+      box-shadow: inset 0 1px 0 rgba(148, 163, 184, 0.1);
+    }
+  }
+}
+
+@media (min-width: $bp-lg) {
+  .card-list:hover > .card:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+.card__aside {
+  flex: 1 1 120px;
+  padding-top: 3px;
+}
+
+.card__body {
+  flex: 999 1 320px;
+  min-width: 0;
+}
+
+.card__thumb {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 76px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  transition: border-color 0.15s ease;
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.card:hover .card__thumb {
+  border-color: var(--border-strong);
+}
+
+.card__title {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--text-strong);
+}
+
+// The title link stretches over the whole card
+.card__link {
+  color: var(--text-strong);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+  }
+
+  .icon {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    vertical-align: -1px;
+    transition: transform 0.15s ease;
+  }
+}
+
+.card:hover .card__link,
+.card__link:focus-visible {
+  color: var(--accent);
+}
+
+.card:hover .card__link .icon {
+  transform: translate(2px, -2px);
+}
+
+.card:hover .card__link--internal .icon {
+  transform: translateX(4px);
+}
+
+.card__text {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+
+  // Inline links sit above the stretched title link
+  a {
+    position: relative;
+    z-index: 1;
+    color: var(--text-strong);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.card__meta {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+
+  a {
+    position: relative;
+    z-index: 1;
+    color: var(--accent);
+  }
+}
+
+.card__links {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+  margin-top: 4px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent);
+  }
+}
+
+// --- Featured publication ---
+
+.feature-card {
+  padding: 28px;
+  margin-bottom: 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+}
+
+.feature-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.feature-card__title {
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--text-strong);
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.feature-card__authors {
+  margin-top: 8px;
+  font-size: 14px;
+
+  b,
+  strong {
+    font-weight: 600;
+    color: var(--text-strong);
+  }
+}
+
+.feature-card__text {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.feature-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin-top: 12px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:first-child {
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

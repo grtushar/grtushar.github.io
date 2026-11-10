@@ -1,0 +1,17 @@
+<ul class="socials" aria-label="Elsewhere">
+  {%- if site.author.github %}
+  <li><a class="social" href="https://github.com/{{ site.author.github }}" aria-label="GitHub">{% include site/icon.html name="github" stroke="1.8" %}</a></li>
+  {%- endif %}
+  {%- if site.author.linkedin %}
+  <li><a class="social" href="https://www.linkedin.com/in/{{ site.author.linkedin }}" aria-label="LinkedIn">{% include site/icon.html name="linkedin" stroke="1.8" %}</a></li>
+  {%- endif %}
+  {%- if site.author.googlescholar %}
+  <li><a class="social" href="{{ site.author.googlescholar }}" aria-label="Google Scholar">{% include site/icon.html name="scholar" stroke="1.8" %}</a></li>
+  {%- endif %}
+  {%- if site.author.twitter %}
+  <li><a class="social" href="https://twitter.com/{{ site.author.twitter }}" aria-label="Twitter">{% include site/icon.html name="twitter" stroke="1.8" %}</a></li>
+  {%- endif %}
+  {%- if site.author.email %}
+  <li><a class="social" href="mailto:{{ site.author.email }}" aria-label="Email">{% include site/icon.html name="mail" stroke="1.8" %}</a></li>
+  {%- endif %}
+</ul>
