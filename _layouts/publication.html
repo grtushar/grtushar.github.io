@@ -1,0 +1,26 @@
+---
+layout: base
+---
+{% include site/topbar.html %}
+<main id="content" class="page-main">
+  <div class="page-wrap">
+    <article class="post">
+      <p class="post__crumbs"><a href="{{ '/#research' | relative_url }}">Research</a> <span aria-hidden="true">/</span> {{ page.venue }} {{ page.year }}</p>
+      <h1 class="post__title">{{ page.title }}</h1>
+      <p class="post__lead feature-card__authors">{{ page.authors | default: page.citation }}</p>
+      <div class="feature-card__links">
+        {%- if page.paperurl %}
+        <a href="{{ page.paperurl }}">Read the paper {% include site/icon.html name="arrow-up-right" %}</a>
+        {%- endif %}
+        {%- if site.author.googlescholar %}
+        <a href="{{ site.author.googlescholar }}">Google Scholar {% include site/icon.html name="arrow-up-right" %}</a>
+        {%- endif %}
+      </div>
+      <div class="prose post__body">
+        <h2 id="abstract">Abstract</h2>
+        {{ content }}
+      </div>
+    </article>
+  </div>
+</main>
+{% include site/footer.html %}
