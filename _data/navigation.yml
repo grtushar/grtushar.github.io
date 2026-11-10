@@ -25,29 +25,3 @@ pages:
     url: /games/
   - title: Résumé
     url: /files/Resume_Tushar.pdf
-
-# Legacy masthead links (old theme; removed with it)
-main:
-  - title: "Experience"
-    url: /experience/
-
-  - title: "Education"
-    url: /education/
-
-  - title: "Projects"
-    url: /projects/
-
-  - title: "Publications"
-    url: /publications/
-
-  - title: "Research"
-    url: /research/
-
-  - title: "Skills"
-    url: /achievements/
-
-  - title: "Blog"
-    url: /year-archive/
-
-  - title: "Games"
-    url: /games/
