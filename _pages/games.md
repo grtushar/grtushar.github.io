@@ -1,8 +1,9 @@
 ---
-layout: archive
+layout: page
 title: "Games"
 permalink: /games/
-author_profile: true
+description: Play Snake and claim a spot on the global leaderboard.
+lead: A little game I built for this site. Set a score and claim a spot on the global leaderboard.
 ---
 
 <h2 class="snake-heading">Snake</h2>
