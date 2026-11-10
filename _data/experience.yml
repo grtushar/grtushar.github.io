@@ -1,14 +1,28 @@
 # Work history shown in the homepage "Experience" section, newest first.
 - dates: Apr 2020 — Present
-  title: Lead Software Engineer
+  title: Senior Lead Engineer, Software Development
   company: bKash Limited
   url: https://www.bkash.com/
+  previous:
+    - title: Lead Software Engineer
+      dates: Feb 2023 — May 2026
+    - title: Assistant Lead Engineer, Software Engineering
+      dates: Apr 2020 — Jul 2022
   summary: >-
-    Build features for the bKash customer app — a mobile financial service used by
-    millions of people every day — in Flutter. Initiated the team's Test Driven
-    Development practice, take part in hiring, and work with other teams to check
-    the feasibility of new ideas.
-  tags: [Flutter, Dart, TDD, Fintech]
+    Building the mobile financial service millions of people in Bangladesh use every
+    day. Earlier, as Assistant Lead Engineer, developed customer-app features in
+    Flutter, pitched and vetted new feature ideas with other teams, took part in
+    hiring, and initiated the team's Test Driven Development practice.
+  tags: [Flutter, Dart, FastAPI, Machine Learning, TDD, Fintech]
+
+- dates: Aug — Dec 2022
+  title: Graduate Teaching Associate
+  company: Arizona State University
+  url: https://www.asu.edu/
+  summary: >-
+    Graduate teaching associate in Tempe, Arizona, while enrolled in the Computer
+    Science PhD program.
+  tags: [Teaching]
 
 - dates: Mar 2019 — Mar 2020
   title: Software Engineer

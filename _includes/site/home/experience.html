@@ -12,6 +12,13 @@
           {{ job.title }} · {{ job.company }}
           {%- endif -%}
         </h3>
+        {%- if job.previous %}
+        <ul class="card__roles" aria-label="Previous titles at {{ job.company }}">
+          {%- for role in job.previous %}
+          <li>{{ role.title }} <span>· {{ role.dates }}</span></li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
         <p class="card__text">{% if job.summary_html %}{{ job.summary_html }}{% else %}{{ job.summary }}{% endif %}</p>
         {%- if job.tags %}
         <ul class="pill-list" aria-label="Technologies">

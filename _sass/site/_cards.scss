@@ -111,6 +111,20 @@
   transform: translateX(4px);
 }
 
+// Earlier titles held at the same company
+.card__roles {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+
+  span {
+    font-size: 13px;
+  }
+}
+
 .card__text {
   margin-top: 8px;
   font-size: 14px;
