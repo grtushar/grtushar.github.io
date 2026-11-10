@@ -1,0 +1,68 @@
+// ==========================================================================
+// Rouge syntax highlighting — dark theme matched to the site palette
+// ==========================================================================
+
+.highlight {
+  .c, .ch, .cd, .cm, .cpf, .c1, .cs {
+    color: #94a3b8;
+    font-style: italic;
+  }
+
+  .cp {
+    color: #94a3b8;
+  }
+
+  .k, .kc, .kd, .kn, .kp, .kr, .kv {
+    color: #c4b5fd;
+  }
+
+  .kt {
+    color: #7dd3fc;
+  }
+
+  .s, .sa, .sb, .sc, .dl, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss {
+    color: #fcd34d;
+  }
+
+  .m, .mb, .mf, .mh, .mi, .il, .mo {
+    color: #fdba74;
+  }
+
+  .nf, .fm, .nc, .nn {
+    color: #7dd3fc;
+  }
+
+  .nb, .bp, .na {
+    color: #5eead4;
+  }
+
+  .nt {
+    color: #7dd3fc;
+  }
+
+  .nv, .vc, .vg, .vi, .vm, .n, .nx {
+    color: #e2e8f0;
+  }
+
+  .o, .ow, .p {
+    color: #cbd5e1;
+  }
+
+  .gd {
+    color: #fca5a5;
+  }
+
+  .gi {
+    color: #86efac;
+  }
+
+  .gh, .gu {
+    color: #7dd3fc;
+    font-weight: 600;
+  }
+
+  .err {
+    color: #fca5a5;
+    background: none;
+  }
+}

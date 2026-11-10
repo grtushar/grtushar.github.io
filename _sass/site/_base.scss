@@ -1,0 +1,265 @@
+// ==========================================================================
+// Base elements and shared components
+// ==========================================================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(94, 234, 212, 0.3);
+  color: var(--heading);
+}
+
+a {
+  color: var(--text-strong);
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--accent);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: var(--heading);
+  line-height: 1.25;
+}
+
+p {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+// --- Utilities ---
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+
+  &:focus {
+    top: 16px;
+    color: var(--accent-ink);
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex: none;
+}
+
+// --- Spotlight that follows the cursor (home only) ---
+
+.spotlight {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(600px circle at var(--spot-x, 70%) var(--spot-y, 10%), rgba(29, 78, 216, 0.13), transparent 80%);
+}
+
+// --- Labels ---
+
+.section-label {
+  margin: 0 0 24px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-strong);
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+// --- Pills and badges ---
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pill {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-strong);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #cbd5e1;
+  vertical-align: 2px;
+}
+
+.badge--solid {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-ink);
+  letter-spacing: 0.04em;
+}
+
+// --- Links and buttons ---
+
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-strong);
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.15s ease;
+  }
+
+  &:hover .icon {
+    transform: translateX(4px);
+  }
+
+  &--external:hover .icon {
+    transform: translate(2px, -2px);
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-strong);
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  &--accent {
+    border-color: var(--accent);
+    color: var(--accent);
+
+    &:hover {
+      background: var(--accent-bg);
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--text);
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+}

@@ -1,0 +1,421 @@
+// ==========================================================================
+// Homepage: sticky intro column + scrolling content column
+// ==========================================================================
+
+.home {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (min-width: $bp-md) {
+    padding: 0 48px;
+  }
+
+  @media (min-width: $bp-lg) {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+    padding: 0 64px;
+  }
+}
+
+// --- Intro column ---
+
+.home__header {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 64px 0 32px;
+
+  @media (min-width: $bp-lg) {
+    position: sticky;
+    top: 0;
+    width: 46%;
+    height: 100vh;
+    padding: 80px 0 56px;
+    justify-content: space-between;
+    overflow-y: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.home__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.home__photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-strong);
+}
+
+.home__name {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-strong);
+
+  @media (min-width: $bp-md) {
+    font-size: 46px;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.home__role {
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--text-strong);
+}
+
+.home__pitch {
+  max-width: 340px;
+}
+
+.home__nav {
+  display: none;
+
+  @media (min-width: $bp-lg) {
+    display: block;
+    margin-top: 40px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--rule);
+    transition: width 0.15s ease, background 0.15s ease;
+  }
+
+  &:hover,
+  &:focus-visible,
+  &.is-active {
+    color: var(--text-strong);
+
+    &::before {
+      width: 64px;
+      background: var(--text-strong);
+    }
+  }
+}
+
+.home__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.home__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+}
+
+// --- Content column ---
+
+.home__main {
+  padding: 16px 0 64px;
+
+  @media (min-width: $bp-lg) {
+    width: 54%;
+    padding: 80px 0 72px;
+  }
+}
+
+.home-section {
+  margin-bottom: 96px;
+  scroll-margin-top: 24px;
+
+  @media (min-width: $bp-lg) {
+    margin-bottom: 120px;
+    scroll-margin-top: 80px;
+  }
+}
+
+// Section titles stick to the top while scrolling on small screens
+.home-section__title {
+  @media (max-width: $bp-lg - 1) {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    margin: 0 -24px 16px;
+    padding: 16px 24px;
+    background: rgba(15, 23, 42, 0.8);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+  @media (min-width: $bp-md) and (max-width: $bp-lg - 1) {
+    margin: 0 -48px 16px;
+    padding: 16px 48px;
+  }
+}
+
+// "About" has no visible title on large screens
+.home-section__title--mobile {
+  @media (min-width: $bp-lg) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    margin: -1px;
+    padding: 0;
+  }
+}
+
+.about {
+  p + p {
+    margin-top: 16px;
+  }
+
+  a {
+    font-weight: 500;
+    color: var(--text-strong);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.section-more {
+  margin-top: 24px;
+}
+
+// --- Stats ---
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.stat {
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.stat__value {
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stat__label {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.mini-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.mini-stat {
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.mini-stat__value {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--accent);
+
+  small {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+  }
+}
+
+.mini-stat__label {
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+// --- Definition rows (skills) ---
+
+.def-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.def-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+
+  dt {
+    flex: 1 1 120px;
+    padding-top: 4px;
+  }
+
+  dd {
+    flex: 999 1 320px;
+    min-width: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  strong {
+    font-weight: 600;
+    color: var(--text-strong);
+  }
+
+  .pill-list {
+    margin: 0;
+  }
+}
+
+.plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li + li {
+    margin-top: 6px;
+  }
+}
+
+// --- Games teaser ---
+
+.teaser {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px 28px;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-strong);
+  transition: border-color 0.15s ease, background 0.15s ease;
+
+  &:hover {
+    border-color: var(--accent);
+    background: var(--surface-soft);
+  }
+}
+
+.teaser__icon {
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-ink);
+  background: var(--accent);
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.teaser__body {
+  flex: 999 1 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.teaser__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-strong);
+
+  a {
+    color: inherit;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+    }
+  }
+}
+
+.teaser__text {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.teaser__cta {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.home-footer {
+  max-width: 460px;
+  font-size: 13px;
+  line-height: 1.6;
+
+  a {
+    font-weight: 500;
+  }
+}

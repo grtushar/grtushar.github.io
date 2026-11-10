@@ -1,0 +1,71 @@
+---
+layout: base
+---
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign read_minutes = words | divided_by: 200 | plus: 1 -%}
+{% include site/topbar.html %}
+<main id="content" class="page-main">
+  <div class="page-wrap post-layout">
+    <article class="post"{% if page.lang %} lang="{{ page.lang }}"{% endif %}>
+      <p class="post__crumbs" lang="en"><a href="{{ '/blog/' | relative_url }}">Blog</a> <span aria-hidden="true">/</span> {{ page.date | date: "%Y" }}</p>
+      <h1 class="post__title">{{ page.title }}</h1>
+      {%- if page.excerpt %}
+      <p class="post__lead" lang="en">{{ page.excerpt | strip_html }}</p>
+      {%- endif %}
+      <div class="post__meta" lang="en">
+        <div class="post__author">
+          <img src="{{ '/images/DP.jpg' | relative_url }}" alt="">
+          <div>
+            <strong>{{ site.author.name }}</strong>
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> · {{ read_minutes }} min read{% if page.lang == "bn" %} · বাংলা{% endif %}
+          </div>
+        </div>
+        {%- if page.tags.size > 0 %}
+        <ul class="pill-list" aria-label="Tags">
+          {%- for tag in page.tags %}
+          <li class="pill">{{ tag }}</li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+      </div>
+
+      <div class="prose post__body">
+        {{ content }}
+      </div>
+
+      {%- if page.original_url %}
+      <aside class="post__source" lang="en">
+        {% include site/icon.html name="link" %}
+        <span>This post was originally published on <a href="{{ page.original_url }}">{{ page.original_source | default: "another site" }}</a> on {{ page.date | date: "%B %-d, %Y" }}.</span>
+      </aside>
+      {%- endif %}
+
+      <nav class="post-nav" aria-label="More posts" lang="en">
+        {%- if page.previous %}
+        <a class="post-nav__link" href="{{ page.previous.url | relative_url }}">
+          <span class="eyebrow">← Older post</span>
+          <span class="post-nav__title">{{ page.previous.title }}</span>
+        </a>
+        {%- endif %}
+        {%- if page.next %}
+        <a class="post-nav__link post-nav__link--next" href="{{ page.next.url | relative_url }}">
+          <span class="eyebrow">Newer post →</span>
+          <span class="post-nav__title">{{ page.next.title }}</span>
+        </a>
+        {%- else %}
+        <a class="post-nav__link post-nav__link--next" href="{{ '/blog/' | relative_url }}">
+          <span class="eyebrow">Blog</span>
+          <span class="post-nav__title">All posts →</span>
+        </a>
+        {%- endif %}
+      </nav>
+    </article>
+
+    <aside class="toc" aria-labelledby="toc-title" data-toc>
+      <p class="toc__title" id="toc-title">On this page</p>
+      <ol class="toc__list" data-toc-list></ol>
+      <a class="toc__top" href="#content">↑ Back to top</a>
+    </aside>
+  </div>
+</main>
+{% include site/footer.html %}
