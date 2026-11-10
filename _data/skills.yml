@@ -1,0 +1,80 @@
+# Homepage "Skills & Achievements" section.
+stats:
+  - value: "1500+"
+    label: problems solved on Codeforces, LightOJ, UVa & more
+  - value: "1688"
+    label: peak Codeforces rating
+    url: https://codeforces.com/profile/grtushar
+  - value: "29th"
+    label: ACM ICPC Dhaka Regional, 2014
+  - value: "8"
+    label: Coursera certificates in ML, deep learning & design
+
+groups:
+  - name: Languages
+    items: [Dart, Java, JavaScript, Python, C / C++]
+  - name: Mobile & Web
+    items: [Flutter, Android, AngularJS, Vaadin, Spring]
+  - name: Data & Tools
+    items: [Oracle · PL/SQL, MySQL, MongoDB, Git, LaTeX, Vim]
+
+ratings_html: >-
+  Codeforces peak <strong>1688</strong> (<a href="https://codeforces.com/profile/grtushar">profile</a>)
+  · Topcoder peak <strong>1202</strong> (<a href="https://www.topcoder.com/members/shadhin119/details/?track=DATA_SCIENCE&amp;subTrack=SRM">profile</a>)
+
+contests:
+  - name: AUST Intra Programming Contest 2013
+    position: 3rd
+  - name: NCPC RUET 2015
+    position: 11th
+  - name: IUT ICT Fest 2015
+    position: 20th
+  - name: IUT ICT Fest 2014
+    position: 22nd
+  - name: ACM ICPC Dhaka Regional 2014
+    position: 29th
+  - name: NSU IUPC 2013
+    position: 32nd
+  - name: NCPC 2014
+    position: 33rd
+  - name: ACM ICPC Dhaka Regional 2013
+    position: 52nd
+
+community: >-
+  Departmental programming-contest trainer for new contestants, and organizer of two
+  intra-university contests — problem setting, judging, contest environment and
+  troubleshooting.
+
+certificates:
+  - title: Sequence Models
+    issuer: deeplearning.ai
+    date: Jul 2021
+    url: https://www.coursera.org/account/accomplishments/certificate/MAK5YQ5WDY3T
+  - title: Improving Deep Neural Networks
+    issuer: deeplearning.ai
+    date: Jan 2021
+    url: https://www.coursera.org/account/accomplishments/certificate/MH3M2TN7CKX9
+  - title: Version Control with Git
+    issuer: Atlassian
+    date: Jun 2020
+    url: https://www.coursera.org/account/accomplishments/certificate/PJJCQLZJ78T4
+  - title: Kotlin for Java Developers
+    issuer: Coursera
+    date: Jan 2020
+    url: https://www.coursera.org/account/accomplishments/verify/SZ82FU25ZYKL
+  - title: Design Patterns
+    issuer: University of Alberta
+    date: Oct 2019
+    url: https://www.coursera.org/account/accomplishments/certificate/L32V7D8UEMFN
+  - title: Neural Networks and Deep Learning
+    issuer: deeplearning.ai
+    date: Feb 2018
+    url: https://www.coursera.org/account/accomplishments/certificate/72DLKJF9EN7J
+  - title: Text Retrieval and Search Engines
+    issuer: University of Illinois
+    date: Sep 2017
+    url: https://www.coursera.org/account/accomplishments/certificate/QJKUPEMZ748W
+  - title: Machine Learning
+    issuer: Stanford University
+    date: Feb 2017
+    url: https://www.coursera.org/account/accomplishments/certificate/2MSXFLMCVDUH

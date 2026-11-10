@@ -1,0 +1,98 @@
+# All projects. `featured: true` ones appear on the homepage (in this order);
+# every project appears in the archive table at /projects/.
+- title: bKash Customer App
+  url: https://play.google.com/store/apps/details?id=com.bKash.customerapp
+  link_label: Google Play
+  made_at: bKash
+  icon: phone
+  featured: true
+  description: >-
+    Developing features of the bKash mobile banking app for Android and iOS, used by
+    millions of people every day.
+  tags: [Flutter, Android, iOS]
+
+- title: Ridmik Chats
+  url: https://play.google.com/store/apps/details?id=ridmik.one
+  link_label: Google Play
+  made_at: Ridmik Labs
+  icon: lock
+  featured: true
+  description: >-
+    An end-to-end encrypted Android messenger built on the Signal protocol, with
+    in-app image and video editing tools and much faster image processing via
+    RenderScript.
+  tags: [Android, Signal Protocol, RenderScript]
+
+- title: Jamahook
+  url: https://jamahook.com/
+  link_label: jamahook.com
+  made_at: SELISE
+  icon: music
+  featured: true
+  description: >-
+    A social platform for musicians, with the first multi-track audio player for web
+    browsers — trimming, seeking, snap-to-grid and real-time collaboration.
+  tags: [Web Audio API, AngularJS, MongoDB]
+
+- title: Image Detection
+  url: https://github.com/grtushar/Image-Detection
+  link_label: GitHub
+  made_at: Personal
+  icon: scan
+  featured: true
+  description: >-
+    An Android app using Google Firebase ML Kit to detect barcodes and faces and
+    extract additional information from images.
+  tags: [Android, Firebase ML Kit]
+
+- title: Ridmik News
+  url: https://play.google.com/store/apps/details?id=ridmik.news
+  link_label: Google Play
+  made_at: Ridmik Labs
+  description: >-
+    Curated, personalized coverage of current events in Bangladesh and around the
+    globe.
+  tags: [Android]
+
+- title: Track Me
+  url: https://apkgk.com/com.itsoul.lab.trackme
+  link_label: APKGK
+  made_at: itSoul
+  description: >-
+    Share and track real-time location updates to stay close with family and
+    friends.
+  tags: [Android]
+
+- title: Sales Tracker
+  made_at: itSoul
+  description: >-
+    Track product sales — search items and download a summary of last month's sales.
+  tags: [Android]
+
+- title: Online Admission Apply & Result Publication System
+  url: https://github.com/grtushar/Online-Admission-Apply-Result-Publication-System
+  link_label: GitHub
+  made_at: AUST
+  description: 4th-year Advanced Database Lab project.
+  tags: [HTML, CSS, JavaScript, Oracle, PL/SQL]
+
+- title: Chat Messenger
+  url: https://github.com/grtushar/Chat-Messenger
+  link_label: GitHub
+  made_at: AUST
+  description: Multi-client chat program for the 4th-year Network Programming Lab.
+  tags: [Java, Sockets]
+
+- title: Blood Bank
+  url: https://github.com/grtushar/Blood-Bank
+  link_label: GitHub
+  made_at: AUST
+  description: 3rd-year software development lab project.
+  tags: ["C#", MySQL]
+
+- title: DX Ball Game
+  url: https://github.com/grtushar/DX-Ball-Game
+  link_label: GitHub
+  made_at: AUST
+  description: A DX Ball game built with C graphics for the 1st-year software development lab.
+  tags: [C, Graphics]

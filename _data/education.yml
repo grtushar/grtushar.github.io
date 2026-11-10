@@ -1,0 +1,37 @@
+# Homepage "Education" section, most recent first.
+- dates: 2011 — 2015
+  degree: B.Sc. in Computer Science & Engineering
+  school: Ahsanullah University of Science and Technology
+  url: https://aust.edu
+  stats:
+    - value: "3.624"
+      suffix: / 4.0
+      label: CGPA
+    - value: 12th
+      suffix: of 158
+      label: Class rank
+  links:
+    - label: Transcript
+      url: /files/undergrad-transcript.pdf
+    - label: Certificate
+      url: /files/undergrad-certificate.pdf
+
+- dates: HSC
+  degree: Higher Secondary Certificate
+  school: Ramgonj Government College
+  result: GPA <strong>5.00</strong> out of 5.00
+  links:
+    - label: Transcript
+      url: /files/hsc-transcript.pdf
+    - label: Certificate
+      url: /files/hsc-certificate.pdf
+
+- dates: SSC
+  degree: Secondary School Certificate
+  school: Ramgonj M U Government High School
+  result: GPA <strong>5.00</strong> out of 5.00
+  links:
+    - label: Transcript
+      url: /files/ssc-transcript.pdf
+    - label: Certificate
+      url: /files/ssc-certificate.pdf

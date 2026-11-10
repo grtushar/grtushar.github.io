@@ -1,0 +1,37 @@
+<section class="home-section" id="education" aria-labelledby="education-title">
+  <h2 class="section-label home-section__title" id="education-title">Education</h2>
+  <ol class="card-list">
+    {%- for school in site.data.education %}
+    <li class="card">
+      <div class="card__aside eyebrow">{{ school.dates }}</div>
+      <div class="card__body">
+        <h3 class="card__title">
+          {%- if school.url -%}
+          <a class="card__link" href="{{ school.url }}">{{ school.degree }} · {{ school.school }}{% include site/icon.html name="arrow-up-right" %}</a>
+          {%- else -%}
+          {{ school.degree }} · {{ school.school }}
+          {%- endif -%}
+        </h3>
+        {%- if school.stats %}
+        <div class="mini-stats">
+          {%- for stat in school.stats %}
+          <div class="mini-stat">
+            <div class="mini-stat__value">{{ stat.value }} <small>{{ stat.suffix }}</small></div>
+            <div class="mini-stat__label">{{ stat.label }}</div>
+          </div>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+        {%- if school.result %}
+        <p class="card__meta">{{ school.result }}</p>
+        {%- endif %}
+        <div class="card__links">
+          {%- for link in school.links %}
+          <a href="{{ link.url | relative_url }}">{{ link.label }} ↗</a>
+          {%- endfor %}
+        </div>
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>

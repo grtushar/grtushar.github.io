@@ -1,0 +1,65 @@
+---
+layout: base
+---
+<div class="spotlight" aria-hidden="true"></div>
+<div class="home">
+  <header class="home__header">
+    <div>
+      <div class="home__intro">
+        <img class="home__photo" src="{{ '/images/DP.jpg' | relative_url }}" alt="Portrait of {{ site.author.name }}" width="72" height="72">
+        <h1 class="home__name"><a href="{{ '/' | relative_url }}">{{ site.author.name }}</a></h1>
+        <p class="home__role">Lead Software Engineer at {{ site.author.employer | remove: " Limited" }}</p>
+        <p class="home__pitch">I build the payment systems millions of people in Bangladesh use every day — and research where deep learning meets software engineering.</p>
+      </div>
+      <nav class="home__nav" aria-label="Sections">
+        <ul>
+          {%- for section in site.data.navigation.sections %}
+          <li><a class="nav-link" href="#{{ section.id }}">{{ section.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+
+    <div class="home__actions">
+      <div class="home__buttons">
+        <a class="btn btn--accent" href="{{ '/blog/' | relative_url }}">Read the blog {% include site/icon.html name="arrow-right" %}</a>
+        <a class="btn" href="{{ '/games/' | relative_url }}">{% include site/icon.html name="gamepad" %}Play Snake</a>
+      </div>
+      <div class="home__links">
+        {% include site/socials.html %}
+        <a class="arrow-link arrow-link--external" href="{{ '/files/Resume_Tushar.pdf' | relative_url }}">Résumé {% include site/icon.html name="arrow-up-right" %}</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="home__main" id="content">
+    <section class="home-section" id="about" aria-labelledby="about-title">
+      <h2 class="section-label home-section__title home-section__title--mobile" id="about-title">About</h2>
+      <div class="about">
+        {{ content }}
+      </div>
+    </section>
+
+    {% include site/home/experience.html %}
+    {% include site/home/projects.html %}
+    {% include site/home/research.html %}
+    {% include site/home/skills.html %}
+    {% include site/home/education.html %}
+    {% include site/home/writing.html %}
+
+    <section class="home-section" id="games" aria-label="Games">
+      <div class="teaser">
+        <span class="teaser__icon">{% include site/icon.html name="gamepad" %}</span>
+        <span class="teaser__body">
+          <span class="teaser__title"><a href="{{ '/games/' | relative_url }}">Need a break? Play Snake.</a></span>
+          <span class="teaser__text">A little game I built for this site — set a score and claim a spot on the global leaderboard.</span>
+        </span>
+        <span class="teaser__cta" aria-hidden="true">Play now {% include site/icon.html name="arrow-right" %}</span>
+      </div>
+    </section>
+
+    <footer class="home-footer">
+      <p>Built with <a href="https://jekyllrb.com">Jekyll</a> and hosted on GitHub Pages. Layout inspired by <a href="https://brittanychiang.com">Brittany Chiang</a>’s portfolio. Set in <a href="https://rsms.me/inter/">Inter</a>.</p>
+    </footer>
+  </main>
+</div>

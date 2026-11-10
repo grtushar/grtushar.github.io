@@ -1,0 +1,28 @@
+<section class="home-section" id="experience" aria-labelledby="experience-title">
+  <h2 class="section-label home-section__title" id="experience-title">Experience</h2>
+  <ol class="card-list">
+    {%- for job in site.data.experience %}
+    <li class="card">
+      <div class="card__aside eyebrow">{{ job.dates }}</div>
+      <div class="card__body">
+        <h3 class="card__title">
+          {%- if job.url -%}
+          <a class="card__link" href="{{ job.url }}">{{ job.title }} · {{ job.company }}{% include site/icon.html name="arrow-up-right" %}</a>
+          {%- else -%}
+          {{ job.title }} · {{ job.company }}
+          {%- endif -%}
+        </h3>
+        <p class="card__text">{% if job.summary_html %}{{ job.summary_html }}{% else %}{{ job.summary }}{% endif %}</p>
+        {%- if job.tags %}
+        <ul class="pill-list" aria-label="Technologies">
+          {%- for tag in job.tags %}
+          <li class="pill">{{ tag }}</li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+  <p class="section-more"><a class="arrow-link arrow-link--external" href="{{ '/files/Resume_Tushar.pdf' | relative_url }}">View full résumé {% include site/icon.html name="arrow-up-right" %}</a></p>
+</section>

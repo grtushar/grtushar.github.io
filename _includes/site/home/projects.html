@@ -1,0 +1,27 @@
+<section class="home-section" id="projects" aria-labelledby="projects-title">
+  <h2 class="section-label home-section__title" id="projects-title">Projects</h2>
+  <ul class="card-list">
+    {%- assign featured = site.data.projects | where: "featured", true %}
+    {%- for project in featured %}
+    <li class="card">
+      <div class="card__thumb" aria-hidden="true">{% include site/icon.html name=project.icon stroke="1.6" %}</div>
+      <div class="card__body">
+        <h3 class="card__title">
+          {%- if project.url -%}
+          <a class="card__link" href="{{ project.url }}">{{ project.title }}{% include site/icon.html name="arrow-up-right" %}</a>
+          {%- else -%}
+          {{ project.title }}
+          {%- endif -%}
+        </h3>
+        <p class="card__text">{{ project.description }}</p>
+        <ul class="pill-list" aria-label="Technologies">
+          {%- for tag in project.tags %}
+          <li class="pill">{{ tag }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+  <p class="section-more"><a class="arrow-link" href="{{ '/projects/' | relative_url }}">View full project archive {% include site/icon.html name="arrow-right" %}</a></p>
+</section>
