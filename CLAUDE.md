@@ -29,7 +29,7 @@ On Ruby ≥ 3.4 the pinned Jekyll 3.9 fails to load (missing default gems such a
 - **Styles**: `assets/css/site.scss` imports `_sass/site/*` (tokens → base → home → cards → page → prose → syntax) and `_sass/_snake-game.scss`. Colours/fonts are CSS custom properties in `_sass/site/_tokens.scss`. Ruby Sass 3.7: no `@use`, no CSS `min()`/`max()` in SCSS, and don't pass `var()` into Sass colour functions like `rgba()`.
 - **JS**: `assets/js/site.js` (no deps) — cursor spotlight, scroll-spy for the homepage nav and post TOC, code-block language label + copy button (added at runtime to kramdown's `div.highlighter-rouge`).
 - **Icons**: `{% include site/icon.html name="…" %}` — inline stroke SVGs; add new ones to its `case`.
-- `_site/` is committed but is stale build output from the old template. GitHub Pages rebuilds from source, so don't edit `_site/` or treat it as the source of truth.
+- `_site/` is build output and is git-ignored — GitHub Pages builds from source.
 
 ## Snake game (`/games/`)
 
