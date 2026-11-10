@@ -1,4 +1,32 @@
-# main links
+# Homepage sections, in order — drives the left-hand section nav.
+sections:
+  - title: About
+    id: about
+  - title: Experience
+    id: experience
+  - title: Projects
+    id: projects
+  - title: Research
+    id: research
+  - title: Skills
+    id: skills
+  - title: Education
+    id: education
+  - title: Writing
+    id: writing
+
+# Site pages — drives the top bar on subpages.
+pages:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog/
+  - title: Games
+    url: /games/
+  - title: Résumé
+    url: /files/Resume_Tushar.pdf
+
+# Legacy masthead links (old theme; removed with it)
 main:
   - title: "Experience"
     url: /experience/

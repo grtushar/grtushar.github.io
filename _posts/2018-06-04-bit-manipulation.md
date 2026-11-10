@@ -17,7 +17,7 @@ Enough useless talks. Now the good stuffs -
 
 Bit manipulation or Bitwise operations are fast and need less code to write. More importantly, sometimes using bit manipulation can reduce the running time of a program heavily.
 
-### Bitwise Operations
+## Bitwise Operations
 
 1. `~` (1’s complement)
 2. `<<` (left shift)
@@ -26,7 +26,7 @@ Bit manipulation or Bitwise operations are fast and need less code to write. Mor
 5. `|` (or)
 6. `^` (XOR)
 
-### Bitwise & (and) truth table
+## Bitwise & (and) truth table
 
 ```
 0 & 0 = 0
@@ -35,7 +35,7 @@ Bit manipulation or Bitwise operations are fast and need less code to write. Mor
 1 & 1 = 1
 ```
 
-### Bitwise \| (or) truth table
+## Bitwise \| (or) truth table
 
 ```
 0 | 0 = 0
@@ -44,7 +44,7 @@ Bit manipulation or Bitwise operations are fast and need less code to write. Mor
 1 | 1 = 1
 ```
 
-### Bitwise ^ (xor) truth table
+## Bitwise ^ (xor) truth table
 
 ```
 0 ^ 0 = 0
@@ -85,7 +85,7 @@ Right shifting a variable by x bits means dividing the variable by 2ˣ. That mea
 - XOR ( `^` )
 - OR ( `|` )
 
-### Some Important Facts
+## Some Important Facts
 
 Let, X is a single bit, then we can write the following:
 
@@ -98,7 +98,7 @@ X ^ 1 = ~X
 X ^ 0 = X
 ```
 
-### Use Cases
+## Use Cases
 
 **1) Check if a number is power of 2**
 
@@ -156,7 +156,7 @@ x = x & ((1 << n) - 1)
 
 I will keep updating this use case list of bit manipulation whenever I find one. And of course, suggesting new techniques will be very much appreciated.
 
-### References
+## References
 
 - [Hackerearth Blog](https://www.hackerearth.com/practice/notes/bit-manipulation/)
 - [Topcoder Blog](https://www.topcoder.com/community/data-science/data-science-tutorials/a-bit-of-fun-fun-with-bits/)

@@ -141,6 +141,7 @@ exclude:
   - assets/js/vendor
   - config
   - gulpfile.js
+  - CLAUDE.md
   - log
   - node_modules
   - package.json
@@ -187,7 +188,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: post
       author_profile: true
       read_time: true
       comments: true
@@ -217,7 +218,7 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+permalink: /blog/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
 timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones

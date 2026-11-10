@@ -20,7 +20,7 @@ So, I started the [*Version Control with Git*](https://www.coursera.org/learn/ve
 
 As this blog’s primary purpose is to get things in one place, it lacks an elaborate explanation. Nevertheless, If anyone wants to know a detailed explanation, I have added some reference blog links at the end of the blog.
 
-### Git Locations
+## Git Locations
 
 - Working Tree : A single commit’s directories and files
 - Staging Area/Index : Files that are planned for the next commit
@@ -30,21 +30,21 @@ As this blog’s primary purpose is to get things in one place, it lacks an elab
 
 ![Git locations: working tree, staging area, local and remote repository](/images/blog/git-handbook/git-locations.png)
 
-### Branch
+## Branch
 
 A branch is an independent path to the set of commits. Branch labels (master, dev) are implemented as reference which points to the most recent commit of the branch also called “tip of the branch”.
 
-### Reference
+## Reference
 
 A reference is a user-friendly name (pointer) that points to a SHA-1 value or another reference. If a ref points to another reference it’s called symbolic reference.
 
 For example, HEAD reference points to the latest commits of current branch and if the current branch label is master where master is also a reference, therefore HEAD is a symbolic reference.
 
-### git commit’s -a option
+## git commit’s -a option
 
 Used for adding all the modified/deleted items to the staging area automatically, otherwise have to explicitly add the files using `git add` command and then apply git commit command.
 
-### Tilde (~) and Caret (^)
+## Tilde (~) and Caret (^)
 
 - Used after ID’s and references.
 - If a commit has more than one parent than Caret character can be used to indicate diff parents. `HEAD^1` or `HEAD^` means first parent, similarly `HEAD^2` means second parent. `HEAD^^` refers to the first parent of the first parent of the current commit.
@@ -54,7 +54,7 @@ Used for adding all the modified/deleted items to the staging area automatically
 
 ![Using tilde and caret to address ancestor commits](/images/blog/git-handbook/tilde-and-caret.png)
 
-### Tag
+## Tag
 
 A Tag is a Reference/Label attached to a specific commit. Git push doesn’t automatically push tag names to the remote branches.
 
@@ -79,11 +79,11 @@ There are two types of tags:
 git tag -a -m "tag message" tag-name
 ```
 
-### Detached Head
+## Detached Head
 
 Normally the HEAD points to the latest commit of the current branch. But if we checkout to any previous commit then the state is called Detached Head. In the position if we want to start working from that specific commit we should create a branch from that commit.
 
-### Deleting a Branch
+## Deleting a Branch
 
 Deleting a branch only immediately deletes it’s label. We can delete a branch label using `git branch -d <branch-name>` command. But if there are unmerged commits in that branch git refuses to delete the branch.
 
@@ -91,7 +91,7 @@ Using `-D` option instead of `-d` the branch can be deleted and in that case the
 
 Dangling commits will be garbage collected.
 
-### git reflog
+## git reflog
 
 Returns a local list of recent HEAD commits. Also shows the dangling commits. Then to create a branch from that commit the following command can be used:
 
@@ -99,7 +99,7 @@ Returns a local list of recent HEAD commits. Also shows the dangling commits. Th
 git checkout -b featureX <SHA-1 value of the commit>
 ```
 
-### Merge
+## Merge
 
 There are four types of merges
 
@@ -108,7 +108,7 @@ There are four types of merges
 3. **Squash merge**
 4. **Rebase**
 
-### Amending Commit (Rewrite History)
+## Amending Commit (Rewrite History)
 
 - Change the SHA-1 of the commit (rewrites history)
 - Use the following command to update the last commit message -
@@ -137,7 +137,7 @@ git commit --amend --author "<Author Name> <Author Email>"
 
 - Use the amend command only in your local repository. Using amend for the remote repository can create a lot of confusion
 
-### Merge Conflict
+## Merge Conflict
 
 A merge conflict occurs when two branches change the same hunk in different ways. If a merge conflict occurs, git will create file(s) in the working tree containing conflict markers.
 
@@ -151,7 +151,7 @@ A merge conflict occurs when two branches change the same hunk in different ways
 >>>>>>> featureX
 ```
 
-### Tracking Branch
+## Tracking Branch
 
 - Tracking branches are local branches that represents remote branches since the last network command (fetch, pull, push, clone).
 - A tracking branch is named `<remote>/<branch>` i.e. `origin/master`
@@ -183,12 +183,12 @@ Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
 ```
 
-### Credential Cache (Don’t type your password every time)
+## Credential Cache (Don’t type your password every time)
 
 - If you’re using an HTTPS URL to push over, the Git server will ask you for your username and password for authentication. By default it will prompt you on the terminal for this information so the server can tell if you’re allowed to push.
 - If you don’t want to type it every single time you push, you can set up a “credential cache”. The simplest is just to keep it in memory for a few minutes, which you can easily set up by running `git config --global credential.helper cache`.
 
-### Network Commands
+## Network Commands
 
 - **Clone:** Copies a remote repository
 - **Fetch:** Retrieves new objects and references from the remote repository. git fetch updates the tracking branch and git status includes the information about the tracking branch, so running git status followed by git fetch will show how many commits behind the local repository from the corresponding remote repository.
@@ -209,11 +209,11 @@ git pull only aborts if there have uncommitted changes that would be overwritten
   - A general rule is to pull or fetch before push is suggested.
   - If one try to push without having latest remote changes, the push will fail.
 
-### Stashing
+## Stashing
 
 Stashing is a way to save the modified files in the working tree for later access
 
-### Rebasing (Rewrite history)
+## Rebasing (Rewrite history)
 
 - Moves commits to a new parent or base
 - Rebase changes the commit’s SHA-1 values
@@ -222,7 +222,7 @@ Stashing is a way to save the modified files in the working tree for later acces
 
 ![Rebasing a feature branch onto a new base](/images/blog/git-handbook/rebase.png)
 
-### Interactive Rebase (Rewriting History)
+## Interactive Rebase (Rewriting History)
 
 Interactive rebasing lets users edit commits using commands. The commit can belong to any branch. The commit history get changed, so should not be used for shared commits.
 
@@ -245,7 +245,7 @@ Squashing
 - Combines the commit messages
 - Removes the newer commit
 
-### Squash Merge (Rewrite History)
+## Squash Merge (Rewrite History)
 
 ![Squash merge of a feature branch](/images/blog/git-handbook/squash-merge.png)
 
@@ -254,7 +254,7 @@ Squashing
 - Places the result in the staging area
 - The result then can be committed (E)
 
-### Pull Request
+## Pull Request
 
 A feature of git hosting sites (github, bitbucket). The ultimate goal is to merge a branch into the project. Pull request enable team communication related to the work of the branch by doing the followings:
 
@@ -268,7 +268,7 @@ Preparing for pull request steps -
 - Optionally work on the feature branch
 - Push the branch to the remote repository
 
-### Fork
+## Fork
 
 - A fork is a remote copy of an upstream remote repository
 - The upstream repository usually the “source of truth” and fork can be used for creating different source of truth
@@ -276,14 +276,14 @@ Preparing for pull request steps -
 - Fork is a remote repository
 - Pull requests can be made from forks and merged into the upstream repository
 
-### Git Workflows
+## Git Workflows
 
 - **Centralised workflow:** Involves working on a single branch
 - **Feature branch workflow:** Work of the project is done on feature/topic branches and then merged into longer running branches (master/dev).
 - **Forking workflow:** Work is added to the upstream repository using pull requests from the forked repository.
 - **GitFlow workflow:** Enable a continuous train of project releases using multiple types of branches.
 
-### GitFlow
+## GitFlow
 
 ![GitFlow commit graph with master, develop, feature, release and hotfix branches](/images/blog/git-handbook/gitflow.png)
 
@@ -319,7 +319,7 @@ You should not directly merge from the develop or feature branches. This helps e
 
 If you don’t do this, issues that were fixed will reappear in future releases. You can see here that when we merged commit G into master, we also merged it into the develop branch with merge commit I. If we didn’t do that, the bug fix in commit G, will not be in our future versions. Similarly when we merged hotfix J into master, we also merged it into the develop branch in merge commit L.
 
-### git cherry-pick
+## git cherry-pick
 
 Cherry picking is the act of picking a commit from a branch and applying it to another. Steps are as follows:
 
@@ -327,7 +327,7 @@ Cherry picking is the act of picking a commit from a branch and applying it to a
 - Checkout to the target branch where you want to apply the commit
 - `git cherry-pick <commit-reference>`
 
-### What does ‘--set-upstream’ do?
+## What does ‘--set-upstream’ do?
 
 ```bash
 git branch --set-upstream-to <remote-branch>
@@ -349,7 +349,7 @@ One way to avoid having to explicitly do `--set-upstream` is to use the shorthan
 git push -u origin local-branch
 ```
 
-### References
+## References
 
 - [Version Control with Git — Coursera](https://www.coursera.org/learn/version-control-with-git)
 - [How you can go wrong with Git — Aditya Sridhar](https://adityasridhar.com/posts/how-you-can-go-wrong-with-git)

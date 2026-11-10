@@ -1,0 +1,22 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+description: Notes on algorithms, competitive programming and the tools I use every day.
+lead: Notes on algorithms, competitive programming and the tools I use every day — some in English, some in বাংলা.
+redirect_from:
+  - /year-archive/
+  - /wordpress/blog-posts/
+---
+{%- assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+{%- for year in posts_by_year %}
+<section class="year-group" aria-labelledby="year-{{ year.name }}">
+  <h2 class="year-group__title" id="year-{{ year.name }}">{{ year.name }}</h2>
+  <ol class="card-list">
+    {%- for post in year.items %}
+    {% include site/post-card.html post=post date_format="%b %-d" show_tags=true %}
+    {%- endfor %}
+  </ol>
+</section>
+{%- endfor %}
+<p class="section-more"><a class="arrow-link" href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS {% include site/icon.html name="rss" %}</a></p>
