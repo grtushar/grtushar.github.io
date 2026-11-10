@@ -8,7 +8,7 @@ layout: base
       <div class="home__intro">
         <img class="home__photo" src="{{ '/images/DP.jpg' | relative_url }}" alt="Portrait of {{ site.author.name }}" width="72" height="72">
         <h1 class="home__name"><a href="{{ '/' | relative_url }}">{{ site.author.name }}</a></h1>
-        <p class="home__role">Lead Software Engineer at {{ site.author.employer | remove: " Limited" }}</p>
+        <p class="home__role">{{ site.author.title }} at {{ site.author.employer | remove: " Limited" }}</p>
         <p class="home__pitch">I build the payment systems millions of people in Bangladesh use every day — and research where deep learning meets software engineering.</p>
       </div>
       <nav class="home__nav" aria-label="Sections">

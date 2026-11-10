@@ -46,7 +46,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": {{ site.author.name | jsonify }},
-  "jobTitle": "Lead Software Engineer",
+  "jobTitle": {{ site.author.title | jsonify }},
   "worksFor": { "@type": "Organization", "name": {{ site.author.employer | jsonify }} },
   "url": {{ site.url | jsonify }},
   "image": {{ "/images/DP.jpg" | absolute_url | jsonify }},
